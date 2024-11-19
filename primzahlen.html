@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Primzahlen</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="resources/style.css" />
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<div class="navbar">
+<p><a href="index.html">jakob</a> / <a href="archiv.html">archiv</a> /
+primzahlen</p>
+</div>
+<h1 id="die-unendlichkeit-der-primzahlen---der-beweis-nach-euklid">Die
+Unendlichkeit der Primzahlen - Der Beweis nach Euklid</h1>
+<p>Es sei angenommen, dass die Menge der Primzahlen <span
+class="math inline">\(\mathbb{P}\)</span> endlich ist. Das bedeutet,
+dass <span class="math inline">\(\mathbb{P} = \{p_1, p_2, \dots,
+p_n\}\)</span>, wobei <span class="math inline">\(n \in
+\mathbb{N}\)</span> und jedes <span class="math inline">\(p_i\)</span>
+eine Primzahl ist. Nun wird eine Zahl <span
+class="math inline">\(q\)</span> konstruiert, indem das Produkt aller
+<span class="math inline">\(n\)</span> Primzahlen gebildet und zu diesem
+Produkt <span class="math inline">\(1\)</span> addiert wird:</p>
+<p>\[q = p_1 \cdot p_2 \cdot \dots \cdot p_n + 1 = \left( \prod_{i=1}^n
+p_i \right) + 1\]</p>
+<p>Für \(q\) ergeben sich zwei mögliche Fälle:</p>
+<ol type="1">
+<li>\(q \in \mathbb{P}\)</li>
+<li>\(q \notin \mathbb{P}\)</li>
+</ol>
+<p>Im ersten Fall ergibt sich ein Widerspruch. Da \(q \neq p_i\) für
+alle \(i = 1, \dots, n\), existiert eine Primzahl \(q\), die nicht in
+der ursprünglichen Menge \(\mathbb{P}\) enthalten ist. Dies widerspricht
+der Annahme, dass die Menge der Primzahlen endlich ist.</p>
+<p>Im zweiten Fall gilt offensichtlich \(q \in \mathbb{N}\), und nach
+dem Fundamentalsatz der Arithmetik hat jede natürliche Zahl größer als 1
+mindestens einen Primteiler. Folglich muss auch \(q\) einen Primteiler
+besitzen.</p>
+<p>\[\exists \: p \in \mathbb{P}: \quad p \mid q.\]</p>
+<p>Da \(p \in \mathbb{P}\) angenommen wird, gilt insbesondere \(p =
+p_i\) für ein \(i \in \{1, \dots, n\}\). Da \(p\) auch das Produkt \(p_1
+\cdot p_2 \cdot \dots \cdot p_n\) teilt, folgt nach dem
+Teilbarkeitsgesetz:</p>
+<p>\[\begin{align*} p \mid q \quad \text{und} \quad p \mid p_1 \cdot p_2
+\cdot \dots \cdot p_n \quad &amp;\Rightarrow \quad p \mid (q - p_1 \cdot
+p_2 \cdot \dots \cdot p_n) \\ &amp;\Rightarrow \quad p \mid 1.
+\end{align*}\]</p>
+<p>Dies stellt einen Widerspruch dar, da keine Primzahl \(p\) (mit \(p
+\neq 1\)) die Zahl \(1\) teilt. Somit ist die Annahme, dass die Menge
+der Primzahlen \(\mathbb{P}\) endlich ist, widerlegt. Es folgt, dass die
+Menge der Primzahlen unendlich ist.</p>
+<p> </p>
+<p> </p>
+<hr />
+<p><span class="footer"><em>Last updated on 17.11.2024 -
+Jakob</em></span></p>
+</body>
+</html>
