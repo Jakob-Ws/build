@@ -1,0 +1,6 @@
+<Files life.html>
+  AuthName "Jakobw privat Login-Bereich"
+  AuthType Basic
+  AuthUserFile /Users/jakob/Desktop/Pandoc Webseite/build/.htpasswd
+  require valid-user
+</Files>
