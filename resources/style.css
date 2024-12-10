@@ -12,16 +12,6 @@
     --code-bg: #f1f3f5;           /* Helles Grau für Code-Hintergrund */
     --blockquote-bg: #f0f4f8;     /* Sehr helles Blaugrau */
     --math-bg: #edf2f7;           /* Helles Blau für mathematische Blöcke */
-    /* Zusätzliche Farben für Links */
-    --link-1: #FF6347; /* Tomatenrot */
-    --link-2: #4682B4; /* Stahlblau */
-    --link-3: #32CD32; /* Limettengrün */
-    --link-4: #FFD700; /* Gold */
-    --link-5: #8A2BE2; /* Blauviolett */
-    --link-6: #FF1493; /* DeepPink */
-    --link-7: #20B2AA; /* Seegrün */
-    --link-8: #FF4500; /* Orangerot */
-    --link-9: #DA70D6; /* Orchideenfarbe */
 }
 
 /* Basis-Reset */
@@ -81,51 +71,14 @@ li {
     margin-bottom: 0.5em;
 }
 
-/* Links: Zufällige Farben mit nth-child */
+/* Links */
 a:link {
+    color: var(--accent-2);
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: all 0.2s ease;
 }
 
-/* Zufällige Farben für Links */
-a:nth-child(1) {
-    color: var(--link-1); /* Tomatenrot */
-}
-
-a:nth-child(2) {
-    color: var(--link-2); /* Stahlblau */
-}
-
-a:nth-child(3) {
-    color: var(--link-3); /* Limettengrün */
-}
-
-a:nth-child(4) {
-    color: var(--link-4); /* Gold */
-}
-
-a:nth-child(5) {
-    color: var(--link-5); /* Blauviolett */
-}
-
-a:nth-child(6) {
-    color: var(--link-6); /* DeepPink */
-}
-
-a:nth-child(7) {
-    color: var(--link-7); /* Seegrün */
-}
-
-a:nth-child(8) {
-    color: var(--link-8); /* Orangerot */
-}
-
-a:nth-child(9) {
-    color: var(--link-9); /* Orchideenfarbe */
-}
-
-/* Standard-Link-Hover-Effekte */
 a:visited {
     color: var(--accent-2);
 }
