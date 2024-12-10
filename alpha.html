@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Alpha</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="resources/style.css" />
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<div class="navbar">
+<p><a href="index.html">jakob</a> / <a href="archiv.html">archiv</a> /
+alpha</p>
+</div>
+<h1 id="der-lineare-ausdehnungskoeffizient">Der lineare
+Ausdehnungskoeffizient</h1>
+<p>Werden Gegenstände oder Fluide erwärmt, dehnen diese sich in den
+meisten Fällen aus, d.h. ihr Volumen vergrößert sich. Wie groß die
+Veränderung ist, hängt von dem Material ab. Betrachtet man einen Stab
+der Länge <span class="math inline">\(l\)</span> bei einer gewissen
+Temperatur <span class="math inline">\(T\)</span>, lässt sich auf
+Grundlage experimenteller Beobachtungen feststellen, dass es eine
+Proportionalität zwischen der Längenänderung <span
+class="math inline">\(\mathrm{d}l\)</span> und der Temperaturänderung
+<span class="math inline">\(\mathrm{d}T\)</span> gibt. Für die relative
+Längenänderung gilt: <span class="math display">\[
+\begin{aligned}
+\alpha\cdot l   =\frac{\mathrm{d}l}{\mathrm{d}T} &amp;&amp; (1.1)
+\end{aligned}
+\]</span> <span class="math display">\[
+\begin{aligned}
+\alpha\quad &amp;-\quad\text{linearer Ausdehnungskoeffizient}\\
+l\quad  &amp;-\quad\text{Länge des Stabs}\\
+\mathrm{d}l\quad    &amp;-\quad\text{Längenänderung} \\
+\mathrm{d}T\quad    &amp;-\quad\text{Temperturänderun}
+\end{aligned}
+\]</span></p>
+<p><span class="math inline">\(\alpha\)</span> nennt man den
+<em>linearen Ausdehnungskoeffizienten</em><a href="#fn1"
+class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Es
+handelt sich hierbei um eine homogene lineare Differentialgleichung
+erster Ordnung, welche sich über den Ansatz der Trennung der Variablen
+lösen lässt. <span class="math display">\[
+\begin{aligned}
+\alpha\cdot l   &amp;=\frac{\mathrm{d}l}{\mathrm{d}T} &amp;&amp;(1.2)\\
+\Leftrightarrow\quad\alpha\cdot\mathrm{d}T  &amp;=\frac{1}{l}\cdot\mathrm{d}l
+&amp;&amp;(1.3)\\
+\Leftrightarrow\quad\int_{T_{0}}^{T_{1}}\alpha\cdot\mathrm{d}T  &amp;=\int_{l_{0}}^{l_{^{1}}}\frac{1}{l}\cdot\mathrm{d}l
+&amp;&amp;(1.4)\\
+\Leftrightarrow\quad\int_{T_{0}}^{T_{1}}\alpha\cdot\mathrm{d}T  &amp;=\mathrm{ln}(l_{1})-\mathrm{ln}(l_{0})
+&amp;&amp;(1.5)\\
+\Leftrightarrow\quad\int_{T_{0}}^{T_{1}}\alpha\cdot\mathrm{d}T  &amp;=\ln\left(\frac{l_{1}}{l_{0}}\right)
+&amp;&amp;(1.6)\\
+\Leftrightarrow\quad\exp\left(\int_{T_{0}}^{T_{1}}\alpha\cdot\mathrm{d}T\right)
+&amp;=\frac{l_{1}}{l_{0}} &amp;&amp;(1.7)\\
+\Leftrightarrow\quad
+l_{0}\cdot\exp\left(\int_{T_{0}}^{T_{1}}\alpha\cdot\mathrm{d}T\right)  &amp;=l_{1}
+&amp;&amp;(1.8)
+\end{aligned}
+\]</span> <span class="math display">\[
+\begin{aligned}
+T_{1}\quad  &amp;-\quad\text{Temperatur nach der Ausdehnung}\\
+T_{0}\quad  &amp;-\quad\text{Temperatur vor der Ausdehnung}\\
+l_{1}\quad  &amp;-\quad\text{Länge nach der Ausdehnung}\\
+l_{0}\quad  &amp;-\quad\text{Länge vor der Ausdehnung}\\
+\end{aligned}
+\]</span>Gleichung 1.8 lässt sich mittels der ersten beiden Gliedern der
+Taylorreihe der Exponentialfunktion wie folgt darstellen:</p>
+<p><span class="math display">\[
+\begin{aligned}
+l_{1}   &amp;=l_{0}(1+\alpha\cdot(T_{1}-T_{0})) &amp;&amp;(1.9)\\
+\Leftrightarrow\quad l_{1}  &amp;=l_{0}(1+\alpha\cdot\Delta T)
+&amp;&amp;(1.10)
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[\Delta
+T\quad-\quad\text{Temperaturdifferenz }(T_{1}-T_{0})\]</span> Betrachtet
+man im Folgenden die Längenänderung <span class="math display">\[\Delta
+l=l_{1}-l_{0}\]</span> gilt mit Gleichung 1.10: <span
+class="math display">\[
+\begin{aligned}
+\Delta l    &amp;=l_{0}\cdot\alpha\cdot\Delta T &amp;&amp;(1.11)\\
+\Leftrightarrow\quad\alpha  &amp;=\frac{\Delta l}{l_{0}\cdot\Delta
+T}&amp;&amp;(1.12)
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[\Delta l\quad-\quad\text{Längenänderung
+}(l_{1}-l_{0})\]</span></p>
+<p> </p>
+<p> </p>
+<hr />
+<p><span class="footer"><em>Aktualisiert: 10.12.2024 -
+Jakob</em></span></p>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Tipler<a href="#fnref1" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+</body>
+</html>
