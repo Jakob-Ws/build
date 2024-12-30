@@ -30,13 +30,17 @@
 <div class="navbar">
 <p><a href="index.html">jakob</a> / <a href="stm.html">stm</a></p>
 </div>
-<h1 id="stochastischen-methoden">Stochastischen Methoden</h1>
+<h1 id="stochastische-methoden">Stochastische Methoden</h1>
 <p>Der hier folgende Text sind, meine persönlichen Notizen zu der von
 mir besuchten Vorlesung zu den Stochastischen Methoden. </p>
 <h2 id="inhaltsverzeichnis">Inhaltsverzeichnis</h2>
 <ol type="1">
-<li><a href="##Wahrscheinlichkeitsräume">Wahrscheinlichkeitsräume</a> ##
-Wahrscheinlichkeitsräume Im Folgenden gilt:</li>
+<li><a
+href="##Wahrscheinlichkeitsräume">Wahrscheinlichkeitsräume</a></li>
+</ol>
+<h2 id="wahrscheinlichkeitsräume">Wahrscheinlichkeitsräume</h2>
+<p>Im Folgenden gilt:</p>
+<ol type="1">
 <li><span class="math inline">\(\Omega\)</span> ist die
 <em>Ergebnismenge</em>, in ihr sind alle möglichen <em>Ergebnisse</em>
 <span class="math inline">\(\omega\)</span> Enthalten.</li>
@@ -49,25 +53,32 @@ denen wir eine Wahrscheinlichkeit <span class="math inline">\(P(A)  \in
 class="math inline">\(\sigma\)</span>-algebra</strong> Ein Mengensystem
 <span class="math inline">\(\mathcal{A}\)</span> von Teilmengen von
 <span class="math inline">\(\Omega\)</span>, nennt man <span
-class="math inline">\(\sigma\)</span>-algebra wenn: - <span
-class="math inline">\(\Omega \in \mathcal{A}\)</span> - <span
-class="math inline">\(A\in \mathcal{A} \Rightarrow \overline{A} \in
-\mathcal{A}\)</span> - <span class="math inline">\((A_n)_{n\in
-\mathbb{N}} \in \mathcal{A} \Rightarrow \bigcup_{n\in
-\mathbb{N}}(A_n)_{n\in \mathbb{N}} \in \mathcal{A}\)</span></p>
+class="math inline">\(\sigma\)</span>-algebra wenn:</p>
+<ul>
+<li><span class="math inline">\(\Omega \in \mathcal{A}\)</span></li>
+<li><span class="math inline">\(A\in \mathcal{A} \Rightarrow
+\overline{A} \in \mathcal{A}\)</span></li>
+<li><span class="math inline">\((A_n)_{n\in \mathbb{N}} \in \mathcal{A}
+\Rightarrow \bigcup_{n\in \mathbb{N}}(A_n)_{n\in \mathbb{N}} \in
+\mathcal{A}\)</span></li>
+</ul>
 <p>Das Paar (<span class="math inline">\(\Omega,\mathcal{A}\)</span>)
 nennt man einen <em>Messraum</em>, falls <span
 class="math inline">\(\mathcal{A}\)</span> eine Sigmaalgebra ist.</p>
-<p>Hieraus folgt direkt: 1. <span class="math inline">\(\emptyset \in
-\mathcal{A}\)</span>, da <span class="math inline">\(\overline{\Omega} =
-\emptyset\)</span> gilt. 2. <span
-class="math inline">\(A_1,A_2,\cdots,A_n \in \mathcal{A} \Rightarrow
-\bigcap_{n\in \mathbb{N}} A_n\in \mathcal{A}\)</span>, da per Punkt drei
-deren Vereinigung enthalten ist, ist auch das Komplement der Vereinigung
-enthalten, was mit DeMorgan einfach der Schnitt ist. 3. <span
-class="math inline">\(A_1.A_2 \in \mathcal{A} \Rightarrow A_1 \cup A_2
-\in \mathcal{A}\land  A_1 \cap A_2 \in \mathcal{A}\)</span>, wegen Punkt
-drei und DeMorgan.</p>
+<p>Hieraus folgt direkt:</p>
+<ol type="1">
+<li><span class="math inline">\(\emptyset \in \mathcal{A}\)</span>, da
+<span class="math inline">\(\overline{\Omega} = \emptyset\)</span>
+gilt.</li>
+<li><span class="math inline">\(A_1,A_2,\cdots,A_n \in \mathcal{A}
+\Rightarrow \bigcap_{n\in \mathbb{N}} A_n\in \mathcal{A}\)</span>, da
+per Punkt drei deren Vereinigung enthalten ist, ist auch das Komplement
+der Vereinigung enthalten, was mit DeMorgan einfach der Schnitt
+ist.</li>
+<li><span class="math inline">\(A_1.A_2 \in \mathcal{A} \Rightarrow A_1
+\cup A_2 \in \mathcal{A}\land  A_1 \cap A_2 \in \mathcal{A}\)</span>,
+wegen Punkt drei und DeMorgan.</li>
+</ol>
 <p><strong>Satz - Der Schnitt von abzählbar unendlich vielen
 Sigmaalgebren</strong> Sind <span
 class="math inline">\(\mathcal{A}_i\)</span> mit <span
