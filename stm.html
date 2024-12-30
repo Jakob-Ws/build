@@ -22,14 +22,128 @@
     }
   </style>
   <link rel="stylesheet" href="resources/style.css" />
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
 </head>
 <body>
 <div class="navbar">
-<p><a href="index.html">jakob</a> / <a href="stm.html">stml</a></p>
+<p><a href="index.html">jakob</a> / <a href="stm.html">stm</a></p>
 </div>
 <h1 id="stochastischen-methoden">Stochastischen Methoden</h1>
 <p>Der hier folgende Text sind, meine persönlichen Notizen zu der von
 mir besuchten Vorlesung zu den Stochastischen Methoden. </p>
+<h2 id="inhaltsverzeichnis">Inhaltsverzeichnis</h2>
+<ol type="1">
+<li><a href="##Wahrscheinlichkeitsräume">Wahrscheinlichkeitsräume</a> ##
+Wahrscheinlichkeitsräume Im Folgenden gilt:</li>
+<li><span class="math inline">\(\Omega\)</span> ist die
+<em>Ergebnismenge</em>, in ihr sind alle möglichen <em>Ergebnisse</em>
+<span class="math inline">\(\omega\)</span> Enthalten.</li>
+<li>Teilemengen <span class="math inline">\(A\)</span> von <span
+class="math inline">\(\Omega\)</span> nennen wir <em>Ereignisse</em>,
+denen wir eine Wahrscheinlichkeit <span class="math inline">\(P(A)  \in
+[0,1]\)</span> zuordnen.</li>
+</ol>
+<p><strong>Definition - <span
+class="math inline">\(\sigma\)</span>-algebra</strong> Ein Mengensystem
+<span class="math inline">\(\mathcal{A}\)</span> von Teilmengen von
+<span class="math inline">\(\Omega\)</span>, nennt man <span
+class="math inline">\(\sigma\)</span>-algebra wenn: - <span
+class="math inline">\(\Omega \in \mathcal{A}\)</span> - <span
+class="math inline">\(A\in \mathcal{A} \Rightarrow \overline{A} \in
+\mathcal{A}\)</span> - <span class="math inline">\((A_n)_{n\in
+\mathbb{N}} \in \mathcal{A} \Rightarrow \bigcup_{n\in
+\mathbb{N}}(A_n)_{n\in \mathbb{N}} \in \mathcal{A}\)</span></p>
+<p>Das Paar (<span class="math inline">\(\Omega,\mathcal{A}\)</span>)
+nennt man einen <em>Messraum</em>, falls <span
+class="math inline">\(\mathcal{A}\)</span> eine Sigmaalgebra ist.</p>
+<p>Hieraus folgt direkt: 1. <span class="math inline">\(\emptyset \in
+\mathcal{A}\)</span>, da <span class="math inline">\(\overline{\Omega} =
+\emptyset\)</span> gilt. 2. <span
+class="math inline">\(A_1,A_2,\cdots,A_n \in \mathcal{A} \Rightarrow
+\bigcap_{n\in \mathbb{N}} A_n\in \mathcal{A}\)</span>, da per Punkt drei
+deren Vereinigung enthalten ist, ist auch das Komplement der Vereinigung
+enthalten, was mit DeMorgan einfach der Schnitt ist. 3. <span
+class="math inline">\(A_1.A_2 \in \mathcal{A} \Rightarrow A_1 \cup A_2
+\in \mathcal{A}\land  A_1 \cap A_2 \in \mathcal{A}\)</span>, wegen Punkt
+drei und DeMorgan.</p>
+<p><strong>Satz - Der Schnitt von abzählbar unendlich vielen
+Sigmaalgebren</strong> Sind <span
+class="math inline">\(\mathcal{A}_i\)</span> mit <span
+class="math inline">\(i\in I\)</span> Sigmaalgebren so ist deren Schnitt
+<span class="math inline">\(\bigcap_{i\in I} \mathcal{A}_i\)</span>
+wieder eine Sigmaalgebra.</p>
+<p><strong>Definition - Erzeugt <span
+class="math inline">\(\sigma\)</span>-Algebra</strong> Sei <span
+class="math inline">\(\mathcal{E} \subseteq P(\Omega)\)</span>. Man
+nennt <span class="math inline">\(\sigma({\mathcal{E}})\)</span> die von
+<span class="math inline">\(\mathcal{E}\)</span> erzeugte Sigmaalgebra.
+D.h. <span class="math inline">\(\sigma({\mathcal{E}})\)</span> ist die
+kleinste Sigmaalgebra, die <span
+class="math inline">\({\mathcal{E}}\)</span> enthält. Gilt <span
+class="math inline">\(\sigma({\mathcal{E}})=\mathcal{A}\)</span> so ist
+<span class="math inline">\(\mathcal{E}\)</span> ein <em>Erzeuger</em>
+<span class="math inline">\(\mathcal{A}\)</span>. Es gilt hierbei immer
+<span
+class="math display">\[\sigma({\mathcal{E}})=\bigcap\{\mathcal{A}:\mathcal{A}
+\text{ ist Sigmaalgebra und } \mathcal{E}\subseteq
+\mathcal{A}\}.\]</span></p>
+<p>Eine hier zu erwähnend Sigmaalgebra ist die Borelsche <span
+class="math inline">\(\sigma\)</span>-Algebra <span
+class="math inline">\(\mathcal{B}^d\)</span> in <span
+class="math inline">\(\mathbb{R}^d\)</span>. Sie wird von den offenen
+Mengen <span class="math inline">\(\mathcal{O}\)</span> im <span
+class="math inline">\(\mathbb{R}^d\)</span> erzeugt und spielt im
+Folgenden eine wichtige Rolle.</p>
+<p><strong>Definition - Wahrscheinlichkeitsraum</strong> Ein Messraum
+(<span class="math inline">\(\Omega,\mathcal{A}\)</span>) mit einer
+Abbildung <span class="math inline">\(P:\mathcal{A} \to [0,1]\)</span>
+nennt man einen <em>Wahrscheinlichkeitsraum</em>, wenn <span
+class="math inline">\(P\)</span> ein Wahrscheinlichkeitsmaß ist,
+d.h.:</p>
+<ul>
+<li><span class="math inline">\(P(\Omega)=1\)</span></li>
+<li><span class="math inline">\(P\)</span> muss <span
+class="math inline">\(\sigma\)</span>-additiv sein also: <span
+class="math display">\[P(\bigcup_{n\in\mathbb{N}}A_n)=\sum_{n\in\mathbb{N}}P(A_n)
+\quad \text{für paarweise disjunkte }A_n \in \mathcal{A}\]</span></li>
+</ul>
+<p><strong>Satz - Rechenregeln im Wahrscheinlichkeitsraum</strong> Seine
+<span class="math inline">\(A_1,\cdots,A_n,A,B \in \mathcal{A}\)</span>,
+dann gilt:</p>
+<ol type="1">
+<li><span class="math inline">\(P(\emptyset)=0\)</span></li>
+<li><span class="math inline">\(\sigma\)</span>-additivität vor allem
+<span class="math inline">\(P(\overline{A})=1-P(A)\)</span></li>
+<li><span class="math inline">\(P(A\cup B) = P(A)+P(B)-P(A\cap
+B)\)</span></li>
+<li><span class="math inline">\(P(A) \leq P(B)\)</span> wenn <span
+class="math inline">\(A \subseteq B\)</span> (Monotonie)</li>
+<li><span class="math inline">\(P(\bigcup_{n\in\mathbb{N}}A_n)\leq
+\sum_{n\in\mathbb{N}}P(A_n)\)</span> (Subadditivität)</li>
+</ol>
+<p>Der dritte Punkt lässt sich für abzählbar unendliche viele <span
+class="math inline">\(A_i\)</span> folgendermaßen erweitern.</p>
+<p><strong>Satz - Siebformel, Einschluss-Ausschluss-Formel</strong>
+Seien <span class="math inline">\(A_1,\cdots,A_n \in
+\mathcal{A}\)</span>, dann gilt:</p>
+<p><span class="math display">\[P(A_1\cup\cdots\cup A_n)=
+\sum_{k=1}^n(-1)^{k+1}\cdot \sum_{1\leq i_1 &lt; \cdots&lt;i_k\leq n
+}P(A_{i1}\cap \cdots \cap A_{ik})\]</span></p>
+<p><strong>Definition - Nullmengen</strong></p>
+<ol type="1">
+<li>In einem Wahrscheinlichkeitsraum nennt man eine Menge <span
+class="math inline">\(N \subseteq P(\Omega)\)</span> eine
+<em>Nullmenge</em>, wenn ein <span class="math inline">\(A \in
+\mathcal{A}\)</span> existiert mit <span
+class="math inline">\(P(A)=0\)</span> und <span class="math inline">\(N
+\subseteq A\)</span> gilt.</li>
+<li>Gilt eine Eigenschaft für alle <span class="math inline">\(\omega
+\in \Omega\setminus N\)</span> so gelte sie fast sicher.</li>
+</ol>
+<p>Es gilt zudem, dass abzählbare Vereinigungen von Nullmengen wieder
+Nullmengen sind.</p>
 <p> </p>
 <p> </p>
 <hr />
