@@ -160,10 +160,185 @@ class="math inline">\(P(A)=0\)</span> und <span class="math inline">\(N
 Nullmengen sind.</p>
 <h2 id="zufallsvariablen-und-verteilungen">Zufallsvariablen und
 Verteilungen</h2>
+<p><strong>Definition - Zufallsvariable</strong> Gegeben seine zwei
+Messräume <span class="math inline">\((\Omega, \mathcal{A})\)</span> und
+<span class="math inline">\((\Omega&#39;, \mathcal{A}&#39;)\)</span>.
+Eine Abbildung <span class="math inline">\(X: \Omega \to
+\Omega&#39;\)</span> heißt <em>messbar</em>, wenn <span
+class="math display">\[X^{-1}(A&#39;)\in \mathcal{A} \quad \forall
+A&#39; \in \mathcal{A&#39;}.\]</span> <span
+class="math inline">\(X^{-1}(A&#39;)\)</span> ist hierbei das Urbild von
+<span class="math inline">\(A&#39;\)</span> unter X. Handelt es sich bei
+<span class="math inline">\((\Omega, \mathcal{A})\)</span> zusätzlich um
+einen Wahrscheinlichkeitsraum, so ist <span
+class="math inline">\(X\)</span> eine Zufallsvariable.</p>
+<p><strong>Definition - Verteilung</strong> Sei <span
+class="math inline">\((\Omega, \mathcal{A}),P\)</span> ein
+Wahrscheinlichkeitsraum,<span class="math inline">\((\Omega&#39;,
+\mathcal{A}&#39;)\)</span> ein Messraum und <span
+class="math inline">\(X\)</span>eine Zufallsvariable. So nennt man:
+<span class="math display">\[P^X:\mathcal{A&#39;}\to[0,1], A&#39;
+\mapsto P(X^{-1}(A&#39;))\]</span> die Verteilung von <span
+class="math inline">\(X\)</span>.</p>
+<p>Durch die Definition der Verteilung von <span
+class="math inline">\(X\)</span> gilt zudem, dass auch <span
+class="math inline">\((\Omega&#39;, \mathcal{A}&#39;,P^X)\)</span> ein
+Wahrscheinlichkeitsraum ist. Haben zwei Zufallsvariablen die gleiche
+Verteilung, so heißen diese identisch verteilt. Das Nachweisen, dass
+eine Abbildung eine Zufallsvariable ist, gestaltet sich nicht immer als
+einfach, somit hilft folgender Satz.</p>
+<p><strong>Satz - Zufallsvariablen</strong> Seien <span
+class="math inline">\((\Omega,\mathcal{A},P)\)</span> ein
+Wahrscheinlichkeitsraum, <span
+class="math inline">\((\Omega&#39;,\mathcal{A&#39;})\)</span> ein
+Messraum und <span class="math inline">\(X:\Omega \to
+\Omega&#39;\)</span> eine Abbildung. Dann gilt:</p>
+<ol type="1">
+<li><span class="math inline">\(X\)</span> ist eine Zufallsvariable,
+wenn <span class="math inline">\(\mathcal{A}=P(\Omega)\)</span>. Ist
+klar, da so jedes Urbild in <span
+class="math inline">\(\mathcal{A}\)</span> enthalten ist.</li>
+<li>Gilt <span class="math inline">\(\mathcal{A&#39;} =
+\sigma(\mathcal{E&#39;})\)</span> für einen Erzeuger <span
+class="math inline">\(\mathcal{E&#39;}\subseteq P(\Omega&#39;)\)</span>,
+so ist <span class="math inline">\(X\)</span> eine Zufallsvariable, wenn
+<span class="math inline">\(X^{-1}(E&#39;)\in \mathcal{A}\)</span> für
+alles <span class="math inline">\(E&#39;\in \mathcal{E}\)</span> gilt.
+Man muss also nicht ganz <span
+class="math inline">\(\mathcal{A&#39;}\)</span> prüfen, sondern nur die
+Elemente des Erzeugers <span
+class="math inline">\(\mathcal{E&#39;}\)</span>.</li>
+<li>Ist <span class="math inline">\(\Omega&#39;=\mathbb{R}\)</span> und
+<span class="math inline">\(\mathcal{A&#39;}=\mathcal{B}\)</span>, so
+ist <span class="math inline">\(X\)</span> eine Zufallsvariable, wenn
+<span class="math display">\[\{X\leq b\}:= \{\omega\in \Omega:
+X(\omega)\leq b\}\in \mathcal{A} \quad \forall b \in \mathbb{R}\]</span>
+d.h. die Menge aller Werte, die eine Zufallsvariable annehmen kann, die
+kleine als <span class="math inline">\(b\)</span> sind muss messbar sein
+und das für alle <span class="math inline">\(b\)</span>.</li>
+<li>Unter den gleichen Voraussetzungen wie in 3. ist <span
+class="math inline">\(X\)</span> auch eine Zufallsvariable, falls <span
+class="math inline">\(\Omega&#39; =
+\overline{\mathbb{R}}:=[-\infty,\infty]\)</span> mit <span
+class="math inline">\(\mathcal{A&#39;}=\overline{\mathcal{B}}:=\sigma(\mathcal{B}\cup\{-\infty\}\cup\{\infty\})\)</span>.</li>
+<li>Zufallsvariablen sind zudem auch:
+<ul>
+<li>stetige Funktionen (mit <span
+class="math inline">\(\mathcal{A}=\mathcal{B}\)</span>)</li>
+<li>konstante Funktionen</li>
+<li>Kompositionen von Zufallsvariablen</li>
+<li>Summen, Differenzen, Produkte und Quotienten von
+Zufallsvariablen</li>
+</ul></li>
+</ol>
+<p><strong>Definition - Von <span class="math inline">\(X\)</span>
+erzeugte Sigmaalgebra</strong> Seien <span
+class="math inline">\((\Omega,\mathcal{A},P)\)</span> ein
+Wahrscheinlichkeitsraum, <span
+class="math inline">\((\Omega&#39;,\mathcal{A&#39;})\)</span> ein
+Messraum und <span class="math inline">\(X:\Omega \to
+\Omega&#39;\)</span> eine Zufallsvariable. Dann ist <span
+class="math inline">\(\sigma(X)\)</span> die kleinste Sigmaalgebra bzgl.
+der <span class="math inline">\(X\)</span> messbar ist. <span
+class="math inline">\(\sigma(X)\subseteq \mathcal{A}\)</span> beinhaltet
+genau die Ereignisse, über deren Eintreten durch Beobachten von <span
+class="math inline">\(X\)</span> entschieden werden kann.</p>
+<h3 id="diskrete-verteilungen">Diskrete Verteilungen</h3>
+<p><strong>Definition - Diskret</strong> Ein Wahrscheinlichkeitsraum und
+das Wahrscheinlichkeitsmaß heißen <em>diskret</em>, falls <span
+class="math inline">\(\Omega\)</span> höchstens abzählbar ist und <span
+class="math inline">\(\mathcal{A}=P(\Omega)\)</span> ist. Das Tupel
+<span class="math inline">\((p_\omega)_{\omega \in \Omega}\)</span> mit
+<span class="math inline">\(p_{\omega} = P(\{\omega\})\)</span> nennt
+man Wahrscheinlichkeitsvektor. Besitzt eine Zufallsvariable eine
+diskrete Verteilung, so nennt man sie diskret.</p>
+<p>In diskreten Wahrscheinlichkeitsräumen gilt <span
+class="math display">\[P(A)=\sum_{\omega \in A}p_{\omega}\]</span></p>
+<p><strong>Satz - Urnenmodelle</strong></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Urnenmodelle</th>
+<th>Reihenfolge</th>
+<th>ohne Reihenfolge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>zurücklegen</strong></td>
+<td>Mögliche Ausgänge <span class="math display">\[A_1=\{(x_1,\cdots
+x_n)\}: x_i \in \{1,\cdots,N\}\Rightarrow \|A_1\|=N^n\]</span></td>
+<td>Geht nicht</td>
+</tr>
+<tr>
+<td><strong>ohne zurücklegen</strong></td>
+<td>Mögliche Ausgänge<span class="math display">\[A_2=\{(x_1,\cdots
+x_n)\}: x_i \in \{1,\cdots,N\}, \text{alle Einträge pwv.}\Rightarrow
+\|A_2\|=\frac{N!}{(N-n)!}\]</span></td>
+<td>Mögliche Ausgänge <span class="math display">\[A_3 =\{(x_1,\cdots
+x_n)\}: x_i \in \{1,\cdots,N\},\text{Einträge geoordnet von klein nach
+groß}\Rightarrow \|A_3\|=\binom{N}{n}\]</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beispiel - Einige diskrete Verteilungen</strong></p>
+<ol type="1">
+<li>Laplaceraum und Gleichverteilung: Ist <span
+class="math inline">\(\Omega\)</span> endlich und <span
+class="math inline">\(p_\omega=1/|\Omega|\)</span> so gilt <span
+class="math display">\[P(A)=\frac{|A|}{|\Omega|}.\]</span></li>
+<li>Hypergeometrische Verteilung <span
+class="math inline">\(\text{Hyp}(N,M,n)\)</span>: Sei <span
+class="math inline">\(N\in \mathbb{N}\)</span> und <span
+class="math inline">\(n,M \in \{0,\cdots ,N\}\)</span>, der
+Wahrscheinlichkeitsvektor ist gegeben durch <span
+class="math display">\[p_k=\text{Hyp}(N,M,n)(k)=\frac{\binom{M}{k}\binom{N-M}{n-k}}{\binom{N}{n}}.\]</span>
+Die Interpretation ist eine Ziehung ohne Zurücklegen und ohne Beachtung
+der Reihenfolge, in der wir eine Grundgesamtheit von <span
+class="math inline">\(N\)</span> haben, von denen <span
+class="math inline">\(M\)</span> das Merkmal <span
+class="math inline">\(E\)</span> tragen. Es wird eine Stichprobe der
+Größe <span class="math inline">\(n\)</span> gezogen. Von diesen tragen
+<span class="math inline">\(k\)</span> das Merkmal <span
+class="math inline">\(E\)</span> z. B. Lotto.</li>
+<li>Binomialverteilung <span
+class="math inline">\(\text{Bin}(n,p)\)</span>: Sei <span
+class="math inline">\(n\in \mathbb{N}\)</span> und <span
+class="math inline">\(p \in (0,1)\)</span>, der
+Wahrscheinlichkeitsvektor ist gegeben durch <span
+class="math display">\[p_k=\text{Bin}(n,p)(k)=\binom{n}{k}p^k(1-p)^{n-k}.\]</span>
+Die Interpretation sind <span class="math inline">\(n\)</span>
+unabhängige Zufallsexperimente mit Ausgang Erfolg/Misserfolg (oder
+ja/nein, 0/1), und <span class="math inline">\(p\)</span> ist die
+Erfolgswahrscheinlichkeit, dass in einem Experiment der gewünschte
+Ausgang auftritt.</li>
+<li>Bernoulliverteilung <span
+class="math inline">\(\text{Ber}(p)\)</span>: Spezialfall von 3. mit
+<span class="math inline">\(n=1\)</span>. Also gilt <span
+class="math inline">\(\text{Ber}(p)=\text{Bin}(1,p)\)</span>. Sie ist
+das diskrete Analogon zur Exponentialverteilung.</li>
+<li>Poissonverteilung <span
+class="math inline">\(\text{Poi}(\lambda)\)</span>: Für <span
+class="math inline">\(\lambda &gt; 0\)</span> ist der
+Wahrscheinlichkeitsvektor gegeben durch <span class="math display">\[p_k
+=\text{Poi}(\lambda)(k)=\frac{\lambda^k}{k!}e^{-\lambda}. \]</span> Die
+Poissonverteilung kommt zum Einsatz, wenn wir unabhängige, gleichartige
+Ereignisse pro Zeiteinheit zählen. Dabei kann <span
+class="math inline">\(\lambda\)</span> als die mittlere Anzahl dieser
+Ereignisse pro Zeiteinheit angesehen werden und <span
+class="math inline">\(\text{Poi}(\lambda)(k)\)</span> als die
+Wahrscheinlichkeit, dass gerade <span class="math inline">\(k\)</span>
+Ereignisse im beobachteten Zeitintervall vorkommen.</li>
+</ol>
 <p> </p>
 <p> </p>
 <hr />
-<p><span class="footer"><em>Aktualisiert: 01.01.2025 -
+<p><span class="footer"><em>Aktualisiert: 02.01.2025 -
 Jakob</em></span></p>
 </body>
 </html>
