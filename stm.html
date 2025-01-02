@@ -35,13 +35,10 @@
 mir besuchten Vorlesung zu den Stochastischen Methoden. </p>
 <h2 id="inhaltsverzeichnis">Inhaltsverzeichnis</h2>
 <ol type="1">
-<li><a
-href="##%20Wahrscheinlichkeitsräume">Wahrscheinlichkeitsräume</a></li>
-<li><a
-href="##%20Zufallsvariablen%20und%20Verteilungen">Zufallsvariablen und
-Verteilungen</a></li>
+<li><a href="#01">Wahrscheinlichkeitsräume</a></li>
+<li><a href="#02">Zufallsvariablen und Verteilungen</a></li>
 </ol>
-<h2 id="wahrscheinlichkeitsräume">Wahrscheinlichkeitsräume</h2>
+<h2 id="01">Wahrscheinlichkeitsräume</h2>
 <p>Im Folgenden gilt:</p>
 <ol type="1">
 <li><span class="math inline">\(\Omega\)</span> ist die
@@ -158,8 +155,7 @@ class="math inline">\(P(A)=0\)</span> und <span class="math inline">\(N
 </ol>
 <p>Es gilt zudem, dass abzählbare Vereinigungen von Nullmengen wieder
 Nullmengen sind.</p>
-<h2 id="zufallsvariablen-und-verteilungen">Zufallsvariablen und
-Verteilungen</h2>
+<h2 id="02">Zufallsvariablen und Verteilungen</h2>
 <p><strong>Definition - Zufallsvariable</strong> Gegeben seine zwei
 Messräume <span class="math inline">\((\Omega, \mathcal{A})\)</span> und
 <span class="math inline">\((\Omega&#39;, \mathcal{A}&#39;)\)</span>.
@@ -335,7 +331,106 @@ class="math inline">\(\text{Poi}(\lambda)(k)\)</span> als die
 Wahrscheinlichkeit, dass gerade <span class="math inline">\(k\)</span>
 Ereignisse im beobachteten Zeitintervall vorkommen.</li>
 </ol>
-<p> </p>
+<h3 id="stetige-verteilungen">Stetige Verteilungen</h3>
+<p><strong>Satz - Wahrscheinlichkeitsmaß</strong> Sei <span
+class="math inline">\(\Omega \subseteq \mathbb{R}^d, \Omega \in
+\mathcal{B}^d\)</span> und <span class="math inline">\(f:\mathbb{R} \to
+[0,\infty]\)</span> eine messbare Funktion mit <span
+class="math inline">\(\int_\Omega f(x)\mathrm{d}x =1\)</span>. Durch
+<span class="math display">\[P(A)=\int_A f(x)\mathrm{d}x\]</span>, für
+alle <span class="math inline">\(A \in \mathcal{B}^d_\Omega\)</span>wird
+dadurch ein Wahrscheinlichkeitsmaß definiert.</p>
+<p><strong>Definition - Dichte &amp; und stetig Verteilung</strong> Sei
+<span class="math inline">\(\Omega\)</span> eine Borelsche Menge im
+<span class="math inline">\(\mathbb{R}^d\)</span>, <span
+class="math inline">\(P\)</span> ein Wahrscheinlichkeitsmaß auf <span
+class="math inline">\((\Omega,\mathcal{B}_\Omega^d)\)</span> und <span
+class="math inline">\(f: \Omega \to [0,\infty]\)</span> sei messbar mit
+<span class="math inline">\(P(A)=\int_Af(x)\mathrm{d}x\)</span>. Dann
+heißt <span class="math inline">\(f\)</span> <em>Dichte</em> von <span
+class="math inline">\(P\)</span>. Ist <span
+class="math inline">\(X\)</span> eine Zufallsvariable mit Werten im
+<span class="math inline">\(\mathbb{R}^d\)</span> und hat <span
+class="math inline">\(P^X\)</span> eine Dichte, so nennt man <span
+class="math inline">\(X\)</span> <em>stetig</em>.</p>
+<p><strong>Beispiel - Einige stetige Verteilungen</strong></p>
+<ol type="1">
+<li>Stetige Gleichverteilung <span
+class="math inline">\(\text{U}_\Omega\)</span>: Auf <span
+class="math inline">\(\Omega \in \mathcal{B}^d,
+\lambda^d(\Omega)&gt;0\)</span> (Flächeninhalt von <span
+class="math inline">\(\Omega\)</span>) gilt für die Dichte <span
+class="math display">\[\frac{1}{\lambda^d(\Omega)}\mathbf{1}_\Omega.\]</span></li>
+<li>Exponentialverteilung <span
+class="math inline">\(\text{Exp}(\beta)\)</span>: Auf <span
+class="math inline">\(\Omega =\mathbb{R}\)</span> mit Parameter <span
+class="math inline">\(\beta&gt;0\)</span> ist sie gegen durch die Dichte
+<span class="math display">\[f:\mathbb{R} \to [0,\infty] \quad x \mapsto
+\beta e^{-\beta x}\mathbf{1}_{[0,\infty)}(x).\]</span> Anwendung findet
+die Exponentialverteilung bei der Modellierung von Lebensdauern,
+Wartezeiten und Schadenshöhen. Es ist die einzige stetige gedächtnislose
+Verteilung, d.h. für <span class="math inline">\(X  \sim
+\text{Exp}(\beta)\)</span> gilt <span
+class="math display">\[\frac{P(X&gt;s+t)}{P(X&gt;s)}= P (X&gt;t) \quad
+\forall s,t \geq 0.\]</span> Z.b. gehen wir davon aus die Lebensdauer
+eine Glühbirne ist Exponentialverteilt. Diese Glühbirne hat bis jetzt
+100 Stunden (<span class="math inline">\(s\)</span>) problemlos
+funktioniert. Die Gedächtnislosigkeit bedeutet, dass die
+Wahrscheinlichkeit, dass sie noch weitere 10 Stunden hält (<span
+class="math inline">\(t\)</span>), genauso groß ist, wie wenn man von
+einer neuen Glühbirne ausgeht. Die 100 Stunden, die sie bereits
+geleuchtet hat, spielen also keine Rolle.</li>
+<li>Normalverteilung <span
+class="math inline">\(\text{N}(\mu,\sigma^2)\)</span>: Mit <span
+class="math inline">\(\mu \in \mathbb{R}\)</span> und <span
+class="math inline">\(\sigma&gt; 0\)</span> auf <span
+class="math inline">\(\Omega = \mathbb{R}\)</span> ist sie durch
+folgende Dichte gegeben: <span
+class="math display">\[\varphi_{\mu,\sigma^2}:\mathbb{R}\to[0,\infty)
+\quad x \mapsto
+\frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}.\]</span>Hierbei
+nennt man <span class="math inline">\(\mu\)</span> den Lageparameter (wo
+ist das Maximum?) und <span class="math inline">\(\sigma\)</span> einen
+Streuungsparameter. Ist <span class="math inline">\(\mu = 0,
+\sigma=1\)</span> so nennt man sie <em>Standardnormalverteilung.</em>
+Anwendung findet die Normalverteilung bei der Modellierung von
+Messfehlern.</li>
+</ol>
+<h3 id="verteilungsfunktion-quantile">Verteilungsfunktion &amp;
+Quantile</h3>
+<p><strong>Definition - Verteilungsfunktion</strong> In einem
+Wahrscheinlichkeitsraum <span
+class="math inline">\((\mathbb{R},\mathcal{B},P)\)</span> heißt <span
+class="math display">\[F:\mathbb{R}\to [0,1] \quad x \mapsto F(x)=
+P((-\infty,x])\]</span> die <em>Verteilungsfunktion</em> von <span
+class="math inline">\(P\)</span>. Ist <span
+class="math inline">\(X\)</span> eine reellwertige Zufallsvariable,
+bezeichnet man <span class="math inline">\(P^X\)</span> mit <span
+class="math inline">\(F^X\)</span> also <span
+class="math display">\[F^X=P^X((-\infty,x])=P^X(X\leq x).\]</span></p>
+<p>Es folgen nun zwei der wichtigen Eigenschaften, die eine
+Verteilungsfunktion erfüllen muss.</p>
+<p><strong>Satz - Eigenschaften der Verteilungsfunktion</strong> Die
+Verteilungsfunktion <span class="math inline">\(F\)</span> eines
+Wahrscheinlichkeitsmaßes <span class="math inline">\(P\)</span> ist
+monoton wachsend und rechtsseitig stetig mit: <span
+class="math display">\[F^-(-\infty)=0 \quad\land\quad F^+(\infty)=1
+.\]</span> Es gilt auch die Umkehrung.</p>
+<p><strong>Definition - Alpha-Quantil</strong> Für gegeben Verteilung
+<span class="math inline">\(P\)</span> mit der Verteilungsfunktion <span
+class="math inline">\(F\)</span> und <span class="math inline">\(\alpha
+\in (0,1)\)</span> nennt man ein <span
+class="math inline">\(q_\alpha\)</span>-Quantil von <span
+class="math inline">\(P\)</span>, wenn <span
+class="math display">\[F(q_\alpha-)\leq\alpha\leq
+F(q_\alpha).\]</span></p>
+<p><strong>Satz - Zusammenhang zwischen Dichte und
+Verteilungsfunktion</strong> Ist $F:, zusätzlich zu den obigen
+Eigenschaften noch stetig differenzierbar mit <span
+class="math inline">\(F&#39;=f\)</span>, so hat das
+Wahrscheinlichkeitsmaß <span class="math inline">\(P\)</span> mit dichte
+<span class="math inline">\(f\)</span> die Verteilungsfunktion <span
+class="math inline">\(F\)</span>.  </p>
 <p> </p>
 <hr />
 <p><span class="footer"><em>Aktualisiert: 02.01.2025 -
