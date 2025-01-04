@@ -193,6 +193,61 @@ class="math inline">\(\mathbb{R}^d\)</span>. Sie wird von den offenen
 Mengen <span class="math inline">\(\mathcal{O}\)</span> im <span
 class="math inline">\(\mathbb{R}^d\)</span> erzeugt und spielt im
 Folgenden eine wichtige Rolle.</p>
+<p><strong>Aufgabe 1.2 - Existenz einer minimalen Sigmaalgebra</strong>
+Sei <span class="math inline">\(S\subseteq P(\Omega)\)</span> ein
+Mengensystem. Zeigen Sie mit den folgenden drei Schritten, dass es eine
+minimale <span class="math inline">\(\sigma\)</span>-Algebra auf <span
+class="math inline">\(\Omega\)</span> gibt, die <span
+class="math inline">\(S\)</span> enthält. Diese <span
+class="math inline">\(\sigma\)</span>-Algebra wird dann mit <span
+class="math inline">\(\sigma(S)\)</span> bezeichnet und heißt die von
+<span class="math inline">\(S\)</span> erzeugte <span
+class="math inline">\(\sigma\)</span>-Algebra.</p>
+<ol type="1">
+<li>Zeigen Sie, dass es eine <span
+class="math inline">\(\sigma\)</span>-Algebra auf <span
+class="math inline">\(\Omega\)</span> gibt, die <span
+class="math inline">\(S\)</span> enthält. Lösung: Zu einem Mengensystem
+<span class="math inline">\(S\)</span> ist <span
+class="math display">\[\sigma(S)=\bigcap\{\mathcal{A}:\mathcal{A} \text{
+ist Sigmaalgebra und } S\subseteq \mathcal{A}\},\]</span> eine solche
+Sigmaalgebra. <span class="math inline">\(P(\Omega)\)</span> ginge
+natürlich auch.</li>
+<li>Zeigen Sie, dass der Schnitt von <span
+class="math inline">\(\sigma\)</span>-Algebren, die <span
+class="math inline">\(S\)</span> enthalten, wieder eine <span
+class="math inline">\(\sigma\)</span>-Algebra ist, die <span
+class="math inline">\(S\)</span> enthält. Lösung: <u><span
+class="math inline">\(\Omega \in \bigcap_{i\in
+I}\mathcal{A_i}\)</span></u>: Da <span
+class="math inline">\(\Omega\)</span> in jeder Sigmaalgebra von <span
+class="math inline">\(\sigma(S)\)</span> enthalten ist, liegt es auch im
+Schnitt derer. <u><span class="math inline">\(A \in \bigcap_{i\in
+I}\mathcal{A_i} \Rightarrow \overline{A} \in \bigcap_{i\in
+I}\mathcal{A_i}\)</span></u>: Wenn <span class="math inline">\(A \in
+\bigcap_{i\in I}\mathcal{A_i}\)</span> ist, dann ist es in jeder <span
+class="math inline">\(\mathcal{A}_i\)</span> aus denen <span
+class="math inline">\(\bigcap_{i\in I}\mathcal{A_i}\)</span> besteht, da
+<span class="math inline">\(\mathcal{A}_i\)</span> alles Sigmaalgebren
+sind, ist überall <span class="math inline">\(\overline{A}\)</span>
+enthalten, und somit auch im Schnitt derer. (<span
+class="math inline">\(A_n)_{n\in \mathbb{N}} \in \bigcap_{i\in
+I}\mathcal{A_i} \Rightarrow \bigcup_{n\in \mathbb{N}}(A_n)_{n\in
+\mathbb{N}} \in \bigcap_{i\in I}\mathcal{A_i}\)</span>: Da jedes <span
+class="math inline">\(A_n\)</span> in <span
+class="math inline">\(\bigcap_{i\in I}\mathcal{A_i}\)</span> liegt,
+liegt jedes <span class="math inline">\(A_n\)</span> auch in jedem <span
+class="math inline">\(\mathcal{A_i}\)</span>. Somit ist <span
+class="math inline">\(\bigcup_{n\in \mathbb{N}}(A_n)_{n\in \mathbb{N}}
+\in \mathcal{A_i}\)</span> und somit auch im Schnitt aller <span
+class="math inline">\(\mathcal{A_i}\)</span></li>
+<li>Folgern Sie, dass es eine minimale <span
+class="math inline">\(\sigma\)</span>-Algebra auf <span
+class="math inline">\(\Omega\)</span> gibt, die <span
+class="math inline">\(S\)</span> enthält. Lösung: <span
+class="math display">\[\sigma(S)=\bigcap\{\mathcal{A}:\mathcal{A} \text{
+ist Sigmaalgebra und } S\subseteq \mathcal{A}\}\]</span></li>
+</ol>
 <p><strong>Definition - Wahrscheinlichkeitsraum</strong> Ein Messraum
 (<span class="math inline">\(\Omega,\mathcal{A}\)</span>) mit einer
 Abbildung <span class="math inline">\(P:\mathcal{A} \to [0,1]\)</span>
@@ -206,6 +261,42 @@ class="math inline">\(\sigma\)</span>-additiv sein also: <span
 class="math display">\[P(\bigcup_{n\in\mathbb{N}}A_n)=\sum_{n\in\mathbb{N}}P(A_n)
 \quad \text{für paarweise disjunkte }A_n \in \mathcal{A}\]</span></li>
 </ul>
+<p><strong>Aufgabe 1.1 - Dreimaliges Würfeln</strong> Ein roter, ein
+gelber und ein grüner Würfel werden gleichzeitig geworfen. Geben Sie
+einen geeigneten Wahrscheinlichkeitsraum für dieses Zufallsexperiment an
+und berechnen Sie dann die Wahrscheinlichkeiten der folgenden
+Ereignisse: <span class="math display">\[
+\begin{aligned}
+A:&amp; \text{ „Der rote und der gelbe Würfel zeigen die gleiche
+Augenzahl.“}\\
+B:&amp; \text{ „Die Augensumme des gelben und des grünen Würfels ist
+durch drei teilbar.“}\\
+C:&amp; \text{ „Der rote und der grüne Würfel zeigen verschiedene
+Augenzahlen.“}
+\end{aligned}\]</span>Lösung: Für den Wahrscheinlichkeitsraum <span
+class="math inline">\((\Omega,\mathcal{A},P)\)</span> gilt: <span
+class="math display">\[
+\begin{aligned}
+\Omega&amp;=\{1,2,3,4,5,6\}^3=\{(r,g_e,g_r)\} \quad \text{ wobei }
+r,g_e,g_r \in \{1,2,3,4,5,6\};\\
+|\Omega|&amp;= 6\cdot 6\cdot 6 = 216\\
+\mathcal{A}&amp;= P(\Omega) \quad \text{(die ganze Potenzmenge)},\\
+P(A) &amp;= \frac{|A|}{|\Omega|} \quad\forall A \in \mathcal{A} \text{
+(Laplace-Maß}).
+\end{aligned}\]</span>Somit gilt für die Ereignisse <span
+class="math inline">\(A,B,C\)</span>:<span
+class="math display">\[\begin{aligned}
+A &amp;=\{(r,g_e,g_r)|r= g_e\} \Rightarrow |A|=1\cdot 6^2 = 36\\
+B &amp;= \{(r,g_e,g_r)|3\mid g_e+ g_r\} \Rightarrow |B| = 6\cdot 12
+=72\\
+C &amp;= \{(r,g_e,g_r)|r \neq  g_r\} \Rightarrow |C| = 6\cdot 6 \cdot 5
+=180.
+\end{aligned}\]</span> Somit gilt für die Wahrscheninlichkeiten:<span
+class="math display">\[\begin{aligned}
+P(A) &amp;=\frac{36}{216}\\
+P(B) &amp;=\frac{72}{216}\\
+P(C) &amp;=\frac{180}{216}.
+\end{aligned}\]</span></p>
 <p><strong>Satz - Rechenregeln im Wahrscheinlichkeitsraum</strong> Seine
 <span class="math inline">\(A_1,\cdots,A_n,A,B \in \mathcal{A}\)</span>,
 dann gilt:</p>
@@ -619,7 +710,7 @@ darzustellen. Klicke <a href="stmcm.html">hier für die Concept-Map</a>.
  </p>
 <p> </p>
 <hr />
-<p><span class="footer"><em>Aktualisiert: 03.01.2025 -
+<p><span class="footer"><em>Aktualisiert: 04.01.2025 -
 Jakob</em></span></p>
 </body>
 </html>
