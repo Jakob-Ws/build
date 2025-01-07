@@ -37,6 +37,9 @@ mir besuchten Vorlesung zu den Stochastischen Methoden. </p>
 <ol type="1">
 <li><a href="#01">Wahrscheinlichkeitsräume</a></li>
 <li><a href="#02">Zufallsvariablen und Verteilungen</a></li>
+<li><a href="#a0">Aufgabenblatt 00</a></li>
+<li><a href="#a1">Aufgabenblatt 01</a></li>
+<li><a href="#a8">Aufgabenblatt 08</a></li>
 <li><a href="#cm">Concept-Map</a></li>
 </ol>
 <h2 id="01">Wahrscheinlichkeitsräume</h2>
@@ -49,70 +52,6 @@ mir besuchten Vorlesung zu den Stochastischen Methoden. </p>
 class="math inline">\(\Omega\)</span> nennen wir <em>Ereignisse</em>,
 denen wir eine Wahrscheinlichkeit <span class="math inline">\(P(A)  \in
 [0,1]\)</span> zuordnen.</li>
-</ol>
-<p><strong>Aufgabe 0.1 - Ergebnismengen und Ereignisse</strong> Geben
-Sie zur Modellierung der folgenden Zufallsexperimente jeweils eine
-geeignete Ergebnismenge <span class="math inline">\(\Omega\)</span> an.
-Stellen Sie dann die angegebenen Ereignisse als Teilmenge von <span
-class="math inline">\(\Omega\)</span> dar.</p>
-<ol type="1">
-<li>In einer Lostrommel befinden sich 5 Kugeln mit den Nummern
-1,2,3,4,5. Es werden zwei Kugeln mit Zurücklegen gezogen. Ereignisse:
-<span class="math display">\[
-\begin{aligned}A:&amp; \text{ „Die Summe der gezogenen Zahlen beträgt
-6.“} \\
-B:&amp; \text{ „Die zweite gezogene Zahl ist mindestens doppelt so groß
-wie die erste.“} \\
-C:&amp; \text{ „Es wird mindestens einmal die Zahl 5 gezogen.“}
-\end{aligned}
-\]</span>Lösung: <span class="math display">\[\begin{aligned}
-\Omega &amp;= \{(a,b)\}=\{1,2,3,4,5\}^2 \quad a,b \in \{1,2,3,4,5\} \\
-A&amp;= \{(a,b)|a+b=6\}=\{(1,5),(5,1),(2,4),(4,2),(3,3)\} \\
-B&amp;=
-\{(a,b)|b\geq2a)\}=\{(1,2),(1,3),(1,4),(1,5),(1,6),(2,4),(2,5),(2,6),(3,6)\}
-\\
-C&amp;= \{(a,b)|a=5 \lor b=5\} =
-\{(1,5),(2,5),(3,5),(4,5),(5,5),(6,5),(5,1),(5,2),(5,3),(5,4),(5,6)\}
-\end{aligned}\]</span></li>
-<li>In einer Lostrommel befinden sich 5 Kugeln mit den Nummern
-1,2,3,4,5. Es werden zwei Kugeln ohne Zurücklegen gezogen. Ereignisse:
-<span class="math display">\[
-\begin{aligned}A:&amp; \text{ „Die Summe der gezogenen Zahlen beträgt
-6.“} \\
-B:&amp; \text{ „Die zweite gezogene Zahl ist mindestens doppelt so groß
-wie die erste.“} \\
-C:&amp; \text{ „Es wird mindestens einmal die Zahl 5 gezogen.“}
-\end{aligned}
-\]</span>Lösung: <span class="math display">\[\begin{aligned}
-\Omega &amp;= \{(a,b)\}=\{1,2,3,4,5\}^2 \quad a,b \in \{1,2,3,4,5\} \\
-A&amp;= \{(a,b)|a+b=6\}=\{(1,5),(5,1),(2,4),(4,2)\} \\
-B&amp;=
-\{(a,b)|b\geq2a)\}=\{(1,2),(1,3),(1,4),(1,5),(1,6),(2,4),(2,5),(2,6),(3,6)\}
-\\
-C&amp;= \{(a,b)|a=5 \lor b=5\} =
-\{(1,5),(2,5),(3,5),(4,5),(6,5),(5,1),(5,2),(5,3),(5,4),(5,6)\}
-\end{aligned}\]</span></li>
-<li>Sechs Personen, die wir zur Identifikation von 1 bis 6
-durchnummerieren, werden durch Auslosen in zwei Dreiergruppen
-aufgeteilt. Ereignisse: <span class="math display">\[
-\begin{aligned}
-A:&amp; \text{ „Person 1 und Person 2 sind in derselben Gruppe.“} \\
-B:&amp; \text{ „Person 5 und Person 6 sind in verschiedenen Gruppen.“}
-\\
-C:&amp; \:\: A\cap B
-\end{aligned}
-\]</span> Lösung: <span class="math display">\[\begin{aligned}
-\Omega &amp;= \{(a,b,c)\}=\{1,2,3,4,5,6\}^3 \quad a,b,c \in
-\{1,2,3,4,5,6\}\ \:\&amp;\:\text{pwv}. \\
-A&amp;= \{(a,b,c)|(a=1\lor a=2)\land(b=1\lor
-b=2)\}=\{(1,2,3),(1,2,4),(1,2,5),(1,2,6),(2,1,3),(2,1,4),(2,1,5),(2,1,6),(\text{alle
-wo 1 und 2 nicht drin sind})\} \\
-B&amp;= \{(a,b,c)|b\geq2a)\}=\{(1,2,5),(1,2,6), \text{usw...}\} \\
-C&amp;= \{(a,b)|a=5 \lor b=5\} =
-\{(1,2,5),(1,2,6),(2,1,5),(2,1,6),(3,4,5),(3,4,6),(4,3,5),(4,3,6,)\}
-\end{aligned}\]</span> Hier müsste man noch alle Permutationen der
-Tripel aufschreiben, was sehr lästig ist, somit bietet es sich eher an
-min Mengen zu arbeiten.</li>
 </ol>
 <p><strong>Definition - <span
 class="math inline">\(\sigma\)</span>-algebra</strong> Ein Mengensystem
@@ -144,27 +83,6 @@ ist.</li>
 \cup A_2 \in \mathcal{A}\land  A_1 \cap A_2 \in \mathcal{A}\)</span>,
 wegen Punkt drei und DeMorgan.</li>
 </ol>
-<p><strong>Aufgabe 0.2 - Ereignisse in messbaren Räumen</strong> Sei
-<span class="math inline">\((\Omega,\mathcal{A})\)</span> ein messbarer
-Raum und <span class="math inline">\(A_1,A_2,\cdots \in
-\mathcal{A}\)</span> eine Folge von Ereignissen. Beschreiben Sie die
-folgenden Ereignisse mithilfe geeigneter mengentheoretischer
-Operationen.</p>
-<ol type="1">
-<li>Keines der Ereignisse <span
-class="math inline">\(A_1,A_2,\cdots\)</span> tritt ein. Lösung: <span
-class="math display">\[\bigcap_{i=1}^\infty \overline{A_i}\]</span></li>
-<li>Genau eines der Ereignisse <span
-class="math inline">\(A_1,A_2,\cdots\)</span> tritt ein. Lösung: <span
-class="math display">\[\bigcup_{n=1}^\infty A_n \cap
-\bigcap_{\substack{i=1\\i\neq n}}^\infty \overline{A_i}\]</span></li>
-<li>Genau zwei der Ereignisse <span
-class="math inline">\(A_1,A_2,\cdots\)</span> treten ein. Lösung: <span
-class="math display">\[\bigcup_{n=1}^\infty
-\bigcup_{\substack{m=1\\m\neq n}}^\infty A_n\cap A_m \cap
-\bigcap_{\substack{i=1\\i\neq n\\i\neq m}}^\infty
-\overline{A_i}\]</span></li>
-</ol>
 <p><strong>Satz - Der Schnitt von abzählbar unendlich vielen
 Sigmaalgebren</strong> Sind <span
 class="math inline">\(\mathcal{A}_i\)</span> mit <span
@@ -193,61 +111,6 @@ class="math inline">\(\mathbb{R}^d\)</span>. Sie wird von den offenen
 Mengen <span class="math inline">\(\mathcal{O}\)</span> im <span
 class="math inline">\(\mathbb{R}^d\)</span> erzeugt und spielt im
 Folgenden eine wichtige Rolle.</p>
-<p><strong>Aufgabe 1.2 - Existenz einer minimalen Sigmaalgebra</strong>
-Sei <span class="math inline">\(S\subseteq P(\Omega)\)</span> ein
-Mengensystem. Zeigen Sie mit den folgenden drei Schritten, dass es eine
-minimale <span class="math inline">\(\sigma\)</span>-Algebra auf <span
-class="math inline">\(\Omega\)</span> gibt, die <span
-class="math inline">\(S\)</span> enthält. Diese <span
-class="math inline">\(\sigma\)</span>-Algebra wird dann mit <span
-class="math inline">\(\sigma(S)\)</span> bezeichnet und heißt die von
-<span class="math inline">\(S\)</span> erzeugte <span
-class="math inline">\(\sigma\)</span>-Algebra.</p>
-<ol type="1">
-<li>Zeigen Sie, dass es eine <span
-class="math inline">\(\sigma\)</span>-Algebra auf <span
-class="math inline">\(\Omega\)</span> gibt, die <span
-class="math inline">\(S\)</span> enthält. Lösung: Zu einem Mengensystem
-<span class="math inline">\(S\)</span> ist <span
-class="math display">\[\sigma(S)=\bigcap\{\mathcal{A}:\mathcal{A} \text{
-ist Sigmaalgebra und } S\subseteq \mathcal{A}\},\]</span> eine solche
-Sigmaalgebra. <span class="math inline">\(P(\Omega)\)</span> ginge
-natürlich auch.</li>
-<li>Zeigen Sie, dass der Schnitt von <span
-class="math inline">\(\sigma\)</span>-Algebren, die <span
-class="math inline">\(S\)</span> enthalten, wieder eine <span
-class="math inline">\(\sigma\)</span>-Algebra ist, die <span
-class="math inline">\(S\)</span> enthält. Lösung: <u><span
-class="math inline">\(\Omega \in \bigcap_{i\in
-I}\mathcal{A_i}\)</span></u>: Da <span
-class="math inline">\(\Omega\)</span> in jeder Sigmaalgebra von <span
-class="math inline">\(\sigma(S)\)</span> enthalten ist, liegt es auch im
-Schnitt derer. <u><span class="math inline">\(A \in \bigcap_{i\in
-I}\mathcal{A_i} \Rightarrow \overline{A} \in \bigcap_{i\in
-I}\mathcal{A_i}\)</span></u>: Wenn <span class="math inline">\(A \in
-\bigcap_{i\in I}\mathcal{A_i}\)</span> ist, dann ist es in jeder <span
-class="math inline">\(\mathcal{A}_i\)</span> aus denen <span
-class="math inline">\(\bigcap_{i\in I}\mathcal{A_i}\)</span> besteht, da
-<span class="math inline">\(\mathcal{A}_i\)</span> alles Sigmaalgebren
-sind, ist überall <span class="math inline">\(\overline{A}\)</span>
-enthalten, und somit auch im Schnitt derer. (<span
-class="math inline">\(A_n)_{n\in \mathbb{N}} \in \bigcap_{i\in
-I}\mathcal{A_i} \Rightarrow \bigcup_{n\in \mathbb{N}}(A_n)_{n\in
-\mathbb{N}} \in \bigcap_{i\in I}\mathcal{A_i}\)</span>: Da jedes <span
-class="math inline">\(A_n\)</span> in <span
-class="math inline">\(\bigcap_{i\in I}\mathcal{A_i}\)</span> liegt,
-liegt jedes <span class="math inline">\(A_n\)</span> auch in jedem <span
-class="math inline">\(\mathcal{A_i}\)</span>. Somit ist <span
-class="math inline">\(\bigcup_{n\in \mathbb{N}}(A_n)_{n\in \mathbb{N}}
-\in \mathcal{A_i}\)</span> und somit auch im Schnitt aller <span
-class="math inline">\(\mathcal{A_i}\)</span></li>
-<li>Folgern Sie, dass es eine minimale <span
-class="math inline">\(\sigma\)</span>-Algebra auf <span
-class="math inline">\(\Omega\)</span> gibt, die <span
-class="math inline">\(S\)</span> enthält. Lösung: <span
-class="math display">\[\sigma(S)=\bigcap\{\mathcal{A}:\mathcal{A} \text{
-ist Sigmaalgebra und } S\subseteq \mathcal{A}\}\]</span></li>
-</ol>
 <p><strong>Definition - Wahrscheinlichkeitsraum</strong> Ein Messraum
 (<span class="math inline">\(\Omega,\mathcal{A}\)</span>) mit einer
 Abbildung <span class="math inline">\(P:\mathcal{A} \to [0,1]\)</span>
@@ -261,42 +124,6 @@ class="math inline">\(\sigma\)</span>-additiv sein also: <span
 class="math display">\[P(\bigcup_{n\in\mathbb{N}}A_n)=\sum_{n\in\mathbb{N}}P(A_n)
 \quad \text{für paarweise disjunkte }A_n \in \mathcal{A}\]</span></li>
 </ul>
-<p><strong>Aufgabe 1.1 - Dreimaliges Würfeln</strong> Ein roter, ein
-gelber und ein grüner Würfel werden gleichzeitig geworfen. Geben Sie
-einen geeigneten Wahrscheinlichkeitsraum für dieses Zufallsexperiment an
-und berechnen Sie dann die Wahrscheinlichkeiten der folgenden
-Ereignisse: <span class="math display">\[
-\begin{aligned}
-A:&amp; \text{ „Der rote und der gelbe Würfel zeigen die gleiche
-Augenzahl.“}\\
-B:&amp; \text{ „Die Augensumme des gelben und des grünen Würfels ist
-durch drei teilbar.“}\\
-C:&amp; \text{ „Der rote und der grüne Würfel zeigen verschiedene
-Augenzahlen.“}
-\end{aligned}\]</span>Lösung: Für den Wahrscheinlichkeitsraum <span
-class="math inline">\((\Omega,\mathcal{A},P)\)</span> gilt: <span
-class="math display">\[
-\begin{aligned}
-\Omega&amp;=\{1,2,3,4,5,6\}^3=\{(r,g_e,g_r)\} \quad \text{ wobei }
-r,g_e,g_r \in \{1,2,3,4,5,6\};\\
-|\Omega|&amp;= 6\cdot 6\cdot 6 = 216\\
-\mathcal{A}&amp;= P(\Omega) \quad \text{(die ganze Potenzmenge)},\\
-P(A) &amp;= \frac{|A|}{|\Omega|} \quad\forall A \in \mathcal{A} \text{
-(Laplace-Maß}).
-\end{aligned}\]</span>Somit gilt für die Ereignisse <span
-class="math inline">\(A,B,C\)</span>:<span
-class="math display">\[\begin{aligned}
-A &amp;=\{(r,g_e,g_r)|r= g_e\} \Rightarrow |A|=1\cdot 6^2 = 36\\
-B &amp;= \{(r,g_e,g_r)|3\mid g_e+ g_r\} \Rightarrow |B| = 6\cdot 12
-=72\\
-C &amp;= \{(r,g_e,g_r)|r \neq  g_r\} \Rightarrow |C| = 6\cdot 6 \cdot 5
-=180.
-\end{aligned}\]</span> Somit gilt für die Wahrscheninlichkeiten:<span
-class="math display">\[\begin{aligned}
-P(A) &amp;=\frac{36}{216}\\
-P(B) &amp;=\frac{72}{216}\\
-P(C) &amp;=\frac{180}{216}.
-\end{aligned}\]</span></p>
 <p><strong>Satz - Rechenregeln im Wahrscheinlichkeitsraum</strong> Seine
 <span class="math inline">\(A_1,\cdots,A_n,A,B \in \mathcal{A}\)</span>,
 dann gilt:</p>
@@ -313,101 +140,6 @@ class="math inline">\(A \subseteq B\)</span> (Monotonie)</li>
 </ol>
 <p>Der dritte Punkt lässt sich für abzählbar unendliche viele <span
 class="math inline">\(A_i\)</span> folgendermaßen erweitern.</p>
-<p><strong>Aufgabe 0.3 - Beispiel für ein
-Wahrscheinlichkeitsmaß</strong> Drei Glühbirnen, von denen jede einzelne
-defekt sein kann, werden gleichzeitig eingeschaltet. Definieren Sie für
-dieses Zufallsexperiment einen messbaren Raum <span
-class="math inline">\((\Omega,\mathcal{A})\)</span>, sodass <span
-class="math inline">\(\mathcal{A}\)</span> die Ereignisse <span
-class="math display">\[
-\begin{aligned}
-A_1: &amp; \text{ „Genau zwei Glühbirnen brennen.“,} \\
-A_2:&amp; \text{ „Höchstens zwei Glühbirnen brennen.“} \\
-\end{aligned}
-\]</span> enthält. Ein Wahrscheinlichkeitsmaß <span
-class="math inline">\(P\)</span> auf dem Raum <span
-class="math inline">\((\Omega,\mathcal{A})\)</span>, soll <span
-class="math inline">\(P(A_1) = \frac{2}{5}\)</span> und <span
-class="math inline">\(P(A_2) = \frac{4}{5}\)</span> erfüllen. Welche
-Wahrscheinlichkeiten können Sie mit diesen Vorgaben dann noch berechnen?
-Lösung: <span class="math display">\[\begin{aligned}
-\Omega &amp;= \{0,1,2,3\} \quad \text{Anzahl der leuchtenden Glühbirnen}
-\\
-\mathcal{A} &amp;= P(\Omega) \quad \text{Ganze Potenzmenge} \\
-\end{aligned}\]</span> Man kann auch <span
-class="math inline">\(\sigma(E)\)</span> als Sigmaalgebra wählen <span
-class="math inline">\(E=\{A_1,A_2\}\)</span>. Zusätzlich lassen sich
-folgende Wahrscheinlichkeiten bestimmen: <span
-class="math display">\[\begin{aligned}
-P(\overline{A_1})&amp;=1- \frac{2}{5} = \frac{3}{5}\\
-P(\overline{A_2})&amp;=1- \frac{4}{5} = \frac{1}{5} \quad \text{Drei
-Glühbirnen brennen.}\\
-P(A_1 \cap \overline{A_2}) &amp;= \frac{2}{5}+\frac{1}{5} = \frac{3}{5}
-\\
-P(\overline{A_1 \cap \overline{A_2}}) &amp;= 1-\frac{3}{5} = \frac{2}{5}
-\end{aligned}\]</span></p>
-<p><strong>Aufgabe 0.4 - Beispiel für einen
-Wahrscheinlichkeitsraum</strong> Wir definieren <span
-class="math display">\[\mathcal{A}=\{A\subseteq \mathbb{R}|A \text{ ist
-abzählbar oder } \overline{A} \text{ ist abzählar.}\}\]</span> und <span
-class="math inline">\(P:\mathcal{A}\to[0,1]\)</span> durch <span
-class="math display">\[P(A)= \begin{cases}0, \text{ falls $A$
-abzählbar,}\\ 1,  \text{sonst.}\end{cases}\]</span></p>
-<ol type="1">
-<li>Zeigen Sie zunächst, dass <span
-class="math inline">\(\mathcal{A}\)</span> eine <span
-class="math inline">\(\sigma\)</span>-Algebra auf <span
-class="math inline">\(\Omega = \mathbb{R}\)</span> ist. Lösung: <span
-class="math inline">\(\emptyset, \mathbb{R} \in \mathcal{A}\)</span>, da
-die Leere-Menge, abzählbar ist und <span
-class="math inline">\(\overline{\mathbb{R}}=\emptyset\)</span> abzählbar
-ist. Sei <span class="math inline">\(A\in \mathcal{A}\)</span>, so gilt
-entweder <span class="math inline">\(A\)</span> oder dessen Komplement
-<span class="math inline">\(\overline{A}\)</span> ist abzählbar. Ist
-<span class="math inline">\(A\)</span> abzählbar, so gilt <span
-class="math inline">\(\overline{A}\in \mathcal{A}\)</span>, da <span
-class="math inline">\(\overline{\overline{A}}=A \in
-\mathcal{A}\)</span>. Ist <span
-class="math inline">\(\overline{A}\)</span> abzählbar. So ist <span
-class="math inline">\(\overline{A}\in \mathcal{A}\)</span> da es
-abzählbar ist. Sei <span class="math inline">\((A_n)_{n\in\mathbb{N}}
-\in \mathcal{A}\)</span>. Falls alle <span
-class="math inline">\(A_n\)</span> abzählbar sind, ist auch deren
-Schnitt abzählbar. Falls aber mindestens ein <span
-class="math inline">\(A_n\)</span> nicht abzählbar ist so ist dessen
-Komplement abzählbar. Im folgenden sei <span
-class="math inline">\(A_k\)</span> mit <span class="math inline">\(k\in
-\mathbb{N}\)</span> nicht abzählbar. Dann gilt: <span
-class="math display">\[\overline{\bigcup_{n\in \mathbb{N}} A_n}=
-\bigcap_{n\in\mathbb{N}} \overline{A_n}\subseteq \overline{A_k}\]</span>
-Hiermit ist gezeigt, dass <span
-class="math inline">\(\overline{\bigcup_{n\in \mathbb{N}} A_n}\)</span>
-abzählbar ist (Teilmengen von abzählbaren Mengen sind selbst auch
-abzählbar). Also <span
-class="math display">\[\bigcap_{n\in\mathbb{N}}A_n \in
-\mathcal{A}\]</span></li>
-<li>Zeigen Sie dann, dass <span
-class="math inline">\((\mathbb{R},\mathcal{A},P)\)</span> ein
-Wahrscheinlichkeitsraum ist. Lösung Der Teil der Sigmaalgebra wurde in
-Punkt eins gezeigt, somit bleibt nur noch zu zeigen das <span
-class="math inline">\(P\)</span> ein Wahrscheinlichkeitsmaß ist. Das
-<span class="math inline">\(\mathbb{R}\)</span> überabzählbar ist, gilt
-<span class="math inline">\(P(\mathbb{R})= 1\)</span>. Seien <span
-class="math inline">\(A_n\in \mathcal{A}\)</span> paarweise disjunkt.
-Falls alle <span class="math inline">\(A_n\)</span> abzählbar sind gilt
-<span class="math display">\[P(\bigcup_{n\in
-\mathbb{N}}A_n)=0=0=\sum_{i=1}^\infty 0 =\sum_{i=1}^\infty
-P(A_n).\]</span> Existiert nun aber min. <span class="math inline">\(k
-\in \mathbb{N}\)</span> das nicht abzählbar ist, muss dessen Komplement
-abzählbar sein. Es gilt also <span
-class="math display">\[P(\bigcup_{n\in \mathbb{N}}A_n)=1,\]</span> da
-sonst auch <span class="math inline">\(A_k\)</span> abzählbar seien
-müsste. Zudem gilt <span class="math display">\[\sum_{i=1}^\infty
-P(A_n)=\sum_{\substack{i=1\\i\neq k}}^\infty
-P(A_n)+P(A_k)=0+1=1.\]</span> Zusammen gilt <span
-class="math display">\[P(\bigcup_{n\in \mathbb{N}}A_n)=\sum_{i=1}^\infty
-P(A_n).\]</span></li>
-</ol>
 <p><strong>Satz - Siebformel, Einschluss-Ausschluss-Formel</strong>
 Seien <span class="math inline">\(A_1,\cdots,A_n \in
 \mathcal{A}\)</span>, dann gilt:</p>
@@ -704,13 +436,427 @@ class="math inline">\(F&#39;=f\)</span>, so hat das
 Wahrscheinlichkeitsmaß <span class="math inline">\(P\)</span> mit dichte
 <span class="math inline">\(f\)</span> die Verteilungsfunktion <span
 class="math inline">\(F\)</span>.</p>
+<h2 id="a0">Aufgabenblatt 00</h2>
+<p><strong>Aufgabe 0.1 - Ergebnismengen und Ereignisse</strong> Geben
+Sie zur Modellierung der folgenden Zufallsexperimente jeweils eine
+geeignete Ergebnismenge <span class="math inline">\(\Omega\)</span> an.
+Stellen Sie dann die angegebenen Ereignisse als Teilmenge von <span
+class="math inline">\(\Omega\)</span> dar.</p>
+<ol type="1">
+<li>In einer Lostrommel befinden sich 5 Kugeln mit den Nummern
+1,2,3,4,5. Es werden zwei Kugeln mit Zurücklegen gezogen. Ereignisse:
+<span class="math display">\[
+\begin{aligned}A:&amp; \text{ „Die Summe der gezogenen Zahlen beträgt
+6.“} \\
+B:&amp; \text{ „Die zweite gezogene Zahl ist mindestens doppelt so groß
+wie die erste.“} \\
+C:&amp; \text{ „Es wird mindestens einmal die Zahl 5 gezogen.“}
+\end{aligned}
+\]</span>Lösung: <span class="math display">\[\begin{aligned}
+\Omega &amp;= \{(a,b)\}=\{1,2,3,4,5\}^2 \quad a,b \in \{1,2,3,4,5\} \\
+A&amp;= \{(a,b)|a+b=6\}=\{(1,5),(5,1),(2,4),(4,2),(3,3)\} \\
+B&amp;=
+\{(a,b)|b\geq2a)\}=\{(1,2),(1,3),(1,4),(1,5),(1,6),(2,4),(2,5),(2,6),(3,6)\}
+\\
+C&amp;= \{(a,b)|a=5 \lor b=5\} =
+\{(1,5),(2,5),(3,5),(4,5),(5,5),(6,5),(5,1),(5,2),(5,3),(5,4),(5,6)\}
+\end{aligned}\]</span></li>
+<li>In einer Lostrommel befinden sich 5 Kugeln mit den Nummern
+1,2,3,4,5. Es werden zwei Kugeln ohne Zurücklegen gezogen. Ereignisse:
+<span class="math display">\[
+\begin{aligned}A:&amp; \text{ „Die Summe der gezogenen Zahlen beträgt
+6.“} \\
+B:&amp; \text{ „Die zweite gezogene Zahl ist mindestens doppelt so groß
+wie die erste.“} \\
+C:&amp; \text{ „Es wird mindestens einmal die Zahl 5 gezogen.“}
+\end{aligned}
+\]</span>Lösung: <span class="math display">\[\begin{aligned}
+\Omega &amp;= \{(a,b)\}=\{1,2,3,4,5\}^2 \quad a,b \in \{1,2,3,4,5\} \\
+A&amp;= \{(a,b)|a+b=6\}=\{(1,5),(5,1),(2,4),(4,2)\} \\
+B&amp;=
+\{(a,b)|b\geq2a)\}=\{(1,2),(1,3),(1,4),(1,5),(1,6),(2,4),(2,5),(2,6),(3,6)\}
+\\
+C&amp;= \{(a,b)|a=5 \lor b=5\} =
+\{(1,5),(2,5),(3,5),(4,5),(6,5),(5,1),(5,2),(5,3),(5,4),(5,6)\}
+\end{aligned}\]</span></li>
+<li>Sechs Personen, die wir zur Identifikation von 1 bis 6
+durchnummerieren, werden durch Auslosen in zwei Dreiergruppen
+aufgeteilt. Ereignisse: <span class="math display">\[
+\begin{aligned}
+A:&amp; \text{ „Person 1 und Person 2 sind in derselben Gruppe.“} \\
+B:&amp; \text{ „Person 5 und Person 6 sind in verschiedenen Gruppen.“}
+\\
+C:&amp; \:\: A\cap B
+\end{aligned}
+\]</span> Lösung: <span class="math display">\[\begin{aligned}
+\Omega &amp;= \{(a,b,c)\}=\{1,2,3,4,5,6\}^3 \quad a,b,c \in
+\{1,2,3,4,5,6\}\ \:\&amp;\:\text{pwv}. \\
+A&amp;= \{(a,b,c)|(a=1\lor a=2)\land(b=1\lor
+b=2)\}=\{(1,2,3),(1,2,4),(1,2,5),(1,2,6),(2,1,3),(2,1,4),(2,1,5),(2,1,6),(\text{alle
+wo 1 und 2 nicht drin sind})\} \\
+B&amp;= \{(a,b,c)|b\geq2a)\}=\{(1,2,5),(1,2,6), \text{usw...}\} \\
+C&amp;= \{(a,b)|a=5 \lor b=5\} =
+\{(1,2,5),(1,2,6),(2,1,5),(2,1,6),(3,4,5),(3,4,6),(4,3,5),(4,3,6,)\}
+\end{aligned}\]</span> Hier müsste man noch alle Permutationen der
+Tripel aufschreiben, was sehr lästig ist, somit bietet es sich eher an
+min Mengen zu arbeiten</li>
+</ol>
+<p><strong>Aufgabe 0.2 - Ereignisse in messbaren Räumen</strong> Sei
+<span class="math inline">\((\Omega,\mathcal{A})\)</span> ein messbarer
+Raum und <span class="math inline">\(A_1,A_2,\cdots \in
+\mathcal{A}\)</span> eine Folge von Ereignissen. Beschreiben Sie die
+folgenden Ereignisse mithilfe geeigneter mengentheoretischer
+Operationen.</p>
+<ol type="1">
+<li>Keines der Ereignisse <span
+class="math inline">\(A_1,A_2,\cdots\)</span> tritt ein. Lösung: <span
+class="math display">\[\bigcap_{i=1}^\infty \overline{A_i}\]</span></li>
+<li>Genau eines der Ereignisse <span
+class="math inline">\(A_1,A_2,\cdots\)</span> tritt ein. Lösung: <span
+class="math display">\[\bigcup_{n=1}^\infty A_n \cap
+\bigcap_{\substack{i=1\\i\neq n}}^\infty \overline{A_i}\]</span></li>
+<li>Genau zwei der Ereignisse <span
+class="math inline">\(A_1,A_2,\cdots\)</span> treten ein. Lösung: <span
+class="math display">\[\bigcup_{n=1}^\infty
+\bigcup_{\substack{m=1\\m\neq n}}^\infty A_n\cap A_m \cap
+\bigcap_{\substack{i=1\\i\neq n\\i\neq m}}^\infty
+\overline{A_i}\]</span></li>
+</ol>
+<p><strong>Aufgabe 0.3 - Beispiel für ein
+Wahrscheinlichkeitsmaß</strong> Drei Glühbirnen, von denen jede einzelne
+defekt sein kann, werden gleichzeitig eingeschaltet. Definieren Sie für
+dieses Zufallsexperiment einen messbaren Raum <span
+class="math inline">\((\Omega,\mathcal{A})\)</span>, sodass <span
+class="math inline">\(\mathcal{A}\)</span> die Ereignisse <span
+class="math display">\[
+\begin{aligned}
+A_1: &amp; \text{ „Genau zwei Glühbirnen brennen.“,} \\
+A_2:&amp; \text{ „Höchstens zwei Glühbirnen brennen.“} \\
+\end{aligned}
+\]</span> enthält. Ein Wahrscheinlichkeitsmaß <span
+class="math inline">\(P\)</span> auf dem Raum <span
+class="math inline">\((\Omega,\mathcal{A})\)</span>, soll <span
+class="math inline">\(P(A_1) = \frac{2}{5}\)</span> und <span
+class="math inline">\(P(A_2) = \frac{4}{5}\)</span> erfüllen. Welche
+Wahrscheinlichkeiten können Sie mit diesen Vorgaben dann noch berechnen?
+Lösung: <span class="math display">\[\begin{aligned}
+\Omega &amp;= \{0,1,2,3\} \quad \text{Anzahl der leuchtenden Glühbirnen}
+\\
+\mathcal{A} &amp;= P(\Omega) \quad \text{Ganze Potenzmenge} \\
+\end{aligned}\]</span> Man kann auch <span
+class="math inline">\(\sigma(E)\)</span> als Sigmaalgebra wählen <span
+class="math inline">\(E=\{A_1,A_2\}\)</span>. Zusätzlich lassen sich
+folgende Wahrscheinlichkeiten bestimmen: <span
+class="math display">\[\begin{aligned}
+P(\overline{A_1})&amp;=1- \frac{2}{5} = \frac{3}{5}\\
+P(\overline{A_2})&amp;=1- \frac{4}{5} = \frac{1}{5} \quad \text{Drei
+Glühbirnen brennen.}\\
+P(A_1 \cap \overline{A_2}) &amp;= \frac{2}{5}+\frac{1}{5} = \frac{3}{5}
+\\
+P(\overline{A_1 \cap \overline{A_2}}) &amp;= 1-\frac{3}{5} = \frac{2}{5}
+\end{aligned}\]</span></p>
+<p><strong>Aufgabe 0.4 - Beispiel für einen
+Wahrscheinlichkeitsraum</strong> Wir definieren <span
+class="math display">\[\mathcal{A}=\{A\subseteq \mathbb{R}|A \text{ ist
+abzählbar oder } \overline{A} \text{ ist abzählar.}\}\]</span> und <span
+class="math inline">\(P:\mathcal{A}\to[0,1]\)</span> durch <span
+class="math display">\[P(A)= \begin{cases}0, \text{ falls $A$
+abzählbar,}\\ 1,  \text{sonst.}\end{cases}\]</span></p>
+<ol type="1">
+<li>Zeigen Sie zunächst, dass <span
+class="math inline">\(\mathcal{A}\)</span> eine <span
+class="math inline">\(\sigma\)</span>-Algebra auf <span
+class="math inline">\(\Omega = \mathbb{R}\)</span> ist. Lösung: <span
+class="math inline">\(\emptyset, \mathbb{R} \in \mathcal{A}\)</span>, da
+die Leere-Menge, abzählbar ist und <span
+class="math inline">\(\overline{\mathbb{R}}=\emptyset\)</span> abzählbar
+ist. Sei <span class="math inline">\(A\in \mathcal{A}\)</span>, so gilt
+entweder <span class="math inline">\(A\)</span> oder dessen Komplement
+<span class="math inline">\(\overline{A}\)</span> ist abzählbar. Ist
+<span class="math inline">\(A\)</span> abzählbar, so gilt <span
+class="math inline">\(\overline{A}\in \mathcal{A}\)</span>, da <span
+class="math inline">\(\overline{\overline{A}}=A \in
+\mathcal{A}\)</span>. Ist <span
+class="math inline">\(\overline{A}\)</span> abzählbar. So ist <span
+class="math inline">\(\overline{A}\in \mathcal{A}\)</span> da es
+abzählbar ist. Sei <span class="math inline">\((A_n)_{n\in\mathbb{N}}
+\in \mathcal{A}\)</span>. Falls alle <span
+class="math inline">\(A_n\)</span> abzählbar sind, ist auch deren
+Schnitt abzählbar. Falls aber mindestens ein <span
+class="math inline">\(A_n\)</span> nicht abzählbar ist so ist dessen
+Komplement abzählbar. Im folgenden sei <span
+class="math inline">\(A_k\)</span> mit <span class="math inline">\(k\in
+\mathbb{N}\)</span> nicht abzählbar. Dann gilt: <span
+class="math display">\[\overline{\bigcup_{n\in \mathbb{N}} A_n}=
+\bigcap_{n\in\mathbb{N}} \overline{A_n}\subseteq \overline{A_k}\]</span>
+Hiermit ist gezeigt, dass <span
+class="math inline">\(\overline{\bigcup_{n\in \mathbb{N}} A_n}\)</span>
+abzählbar ist (Teilmengen von abzählbaren Mengen sind selbst auch
+abzählbar). Also <span
+class="math display">\[\bigcap_{n\in\mathbb{N}}A_n \in
+\mathcal{A}\]</span></li>
+<li>Zeigen Sie dann, dass <span
+class="math inline">\((\mathbb{R},\mathcal{A},P)\)</span> ein
+Wahrscheinlichkeitsraum ist. Lösung Der Teil der Sigmaalgebra wurde in
+Punkt eins gezeigt, somit bleibt nur noch zu zeigen das <span
+class="math inline">\(P\)</span> ein Wahrscheinlichkeitsmaß ist. Das
+<span class="math inline">\(\mathbb{R}\)</span> überabzählbar ist, gilt
+<span class="math inline">\(P(\mathbb{R})= 1\)</span>. Seien <span
+class="math inline">\(A_n\in \mathcal{A}\)</span> paarweise disjunkt.
+Falls alle <span class="math inline">\(A_n\)</span> abzählbar sind gilt
+<span class="math display">\[P(\bigcup_{n\in
+\mathbb{N}}A_n)=0=0=\sum_{i=1}^\infty 0 =\sum_{i=1}^\infty
+P(A_n).\]</span> Existiert nun aber min. <span class="math inline">\(k
+\in \mathbb{N}\)</span> das nicht abzählbar ist, muss dessen Komplement
+abzählbar sein. Es gilt also <span
+class="math display">\[P(\bigcup_{n\in \mathbb{N}}A_n)=1,\]</span> da
+sonst auch <span class="math inline">\(A_k\)</span> abzählbar seien
+müsste. Zudem gilt <span class="math display">\[\sum_{i=1}^\infty
+P(A_n)=\sum_{\substack{i=1\\i\neq k}}^\infty
+P(A_n)+P(A_k)=0+1=1.\]</span> Zusammen gilt <span
+class="math display">\[P(\bigcup_{n\in \mathbb{N}}A_n)=\sum_{i=1}^\infty
+P(A_n).\]</span></li>
+</ol>
+<h2 id="a1">Aufgabenblatt 01</h2>
+<p><strong>Aufgabe 1.1 - Dreimaliges Würfeln</strong> Ein roter, ein
+gelber und ein grüner Würfel werden gleichzeitig geworfen. Geben Sie
+einen geeigneten Wahrscheinlichkeitsraum für dieses Zufallsexperiment an
+und berechnen Sie dann die Wahrscheinlichkeiten der folgenden
+Ereignisse: <span class="math display">\[
+\begin{aligned}
+A:&amp; \text{ „Der rote und der gelbe Würfel zeigen die gleiche
+Augenzahl.“}\\
+B:&amp; \text{ „Die Augensumme des gelben und des grünen Würfels ist
+durch drei teilbar.“}\\
+C:&amp; \text{ „Der rote und der grüne Würfel zeigen verschiedene
+Augenzahlen.“}
+\end{aligned}\]</span>Lösung: Für den Wahrscheinlichkeitsraum <span
+class="math inline">\((\Omega,\mathcal{A},P)\)</span> gilt: <span
+class="math display">\[
+\begin{aligned}
+\Omega&amp;=\{1,2,3,4,5,6\}^3=\{(r,g_e,g_r)\} \quad \text{ wobei }
+r,g_e,g_r \in \{1,2,3,4,5,6\};\\
+|\Omega|&amp;= 6\cdot 6\cdot 6 = 216\\
+\mathcal{A}&amp;= P(\Omega) \quad \text{(die ganze Potenzmenge)},\\
+P(A) &amp;= \frac{|A|}{|\Omega|} \quad\forall A \in \mathcal{A} \text{
+(Laplace-Maß}).
+\end{aligned}\]</span>Somit gilt für die Ereignisse <span
+class="math inline">\(A,B,C\)</span>:<span
+class="math display">\[\begin{aligned}
+A &amp;=\{(r,g_e,g_r)|r= g_e\} \Rightarrow |A|=1\cdot 6^2 = 36\\
+B &amp;= \{(r,g_e,g_r)|3\mid g_e+ g_r\} \Rightarrow |B| = 6\cdot 12
+=72\\
+C &amp;= \{(r,g_e,g_r)|r \neq  g_r\} \Rightarrow |C| = 6\cdot 6 \cdot 5
+=180.
+\end{aligned}\]</span> Somit gilt für die Wahrscheninlichkeiten:<span
+class="math display">\[\begin{aligned}
+P(A) &amp;=\frac{36}{216}\\
+P(B) &amp;=\frac{72}{216}\\
+P(C) &amp;=\frac{180}{216}.
+\end{aligned}\]</span></p>
+<p><strong>Aufgabe 1.2 - Existenz einer minimalen Sigmaalgebra</strong>
+Sei <span class="math inline">\(S\subseteq P(\Omega)\)</span> ein
+Mengensystem. Zeigen Sie mit den folgenden drei Schritten, dass es eine
+minimale <span class="math inline">\(\sigma\)</span>-Algebra auf <span
+class="math inline">\(\Omega\)</span> gibt, die <span
+class="math inline">\(S\)</span> enthält. Diese <span
+class="math inline">\(\sigma\)</span>-Algebra wird dann mit <span
+class="math inline">\(\sigma(S)\)</span> bezeichnet und heißt die von
+<span class="math inline">\(S\)</span> erzeugte <span
+class="math inline">\(\sigma\)</span>-Algebra.</p>
+<ol type="1">
+<li>Zeigen Sie, dass es eine <span
+class="math inline">\(\sigma\)</span>-Algebra auf <span
+class="math inline">\(\Omega\)</span> gibt, die <span
+class="math inline">\(S\)</span> enthält. Lösung: Zu einem Mengensystem
+<span class="math inline">\(S\)</span> ist <span
+class="math display">\[\sigma(S)=\bigcap\{\mathcal{A}:\mathcal{A} \text{
+ist Sigmaalgebra und } S\subseteq \mathcal{A}\},\]</span> eine solche
+Sigmaalgebra. <span class="math inline">\(P(\Omega)\)</span> ginge
+natürlich auch.</li>
+<li>Zeigen Sie, dass der Schnitt von <span
+class="math inline">\(\sigma\)</span>-Algebren, die <span
+class="math inline">\(S\)</span> enthalten, wieder eine <span
+class="math inline">\(\sigma\)</span>-Algebra ist, die <span
+class="math inline">\(S\)</span> enthält. Lösung: <u><span
+class="math inline">\(\Omega \in \bigcap_{i\in
+I}\mathcal{A_i}\)</span></u>: Da <span
+class="math inline">\(\Omega\)</span> in jeder Sigmaalgebra von <span
+class="math inline">\(\sigma(S)\)</span> enthalten ist, liegt es auch im
+Schnitt derer. <u><span class="math inline">\(A \in \bigcap_{i\in
+I}\mathcal{A_i} \Rightarrow \overline{A} \in \bigcap_{i\in
+I}\mathcal{A_i}\)</span></u>: Wenn <span class="math inline">\(A \in
+\bigcap_{i\in I}\mathcal{A_i}\)</span> ist, dann ist es in jeder <span
+class="math inline">\(\mathcal{A}_i\)</span> aus denen <span
+class="math inline">\(\bigcap_{i\in I}\mathcal{A_i}\)</span> besteht, da
+<span class="math inline">\(\mathcal{A}_i\)</span> alles Sigmaalgebren
+sind, ist überall <span class="math inline">\(\overline{A}\)</span>
+enthalten, und somit auch im Schnitt derer. (<span
+class="math inline">\(A_n)_{n\in \mathbb{N}} \in \bigcap_{i\in
+I}\mathcal{A_i} \Rightarrow \bigcup_{n\in \mathbb{N}}(A_n)_{n\in
+\mathbb{N}} \in \bigcap_{i\in I}\mathcal{A_i}\)</span>: Da jedes <span
+class="math inline">\(A_n\)</span> in <span
+class="math inline">\(\bigcap_{i\in I}\mathcal{A_i}\)</span> liegt,
+liegt jedes <span class="math inline">\(A_n\)</span> auch in jedem <span
+class="math inline">\(\mathcal{A_i}\)</span>. Somit ist <span
+class="math inline">\(\bigcup_{n\in \mathbb{N}}(A_n)_{n\in \mathbb{N}}
+\in \mathcal{A_i}\)</span> und somit auch im Schnitt aller <span
+class="math inline">\(\mathcal{A_i}\)</span></li>
+<li>Folgern Sie, dass es eine minimale <span
+class="math inline">\(\sigma\)</span>-Algebra auf <span
+class="math inline">\(\Omega\)</span> gibt, die <span
+class="math inline">\(S\)</span> enthält. Lösung: <span
+class="math display">\[\sigma(S)=\bigcap\{\mathcal{A}:\mathcal{A} \text{
+ist Sigmaalgebra und } S\subseteq \mathcal{A}\}\]</span></li>
+</ol>
+<h2 id="a8">Aufgabenblatt 08</h2>
+<p><strong>Aufgabe 8.1 - Erwartungswert, Kovarianz und
+Unabhängigkeit</strong></p>
+<ol type="1">
+<li>Seien <span class="math inline">\(X\)</span> und <span
+class="math inline">\(Y\)</span> zwei Zufallsvariablen mit gemeinsamer
+Dichte <span
+class="math display">\[f^{X,Y}(x,y)=\frac{6}{7}(x+2y^2)\mathbf{1}_{[0,1]^2}(x,y).\]</span>
+Man kann zeigen, dass die Dichte von <span
+class="math inline">\(X\)</span> und der Erwartungswert von <span
+class="math inline">\(Y\)</span> gegeben sind durch <span
+class="math display">\[f^X(x)=\left(\frac{6}{7}x+\frac{4}{7}\right)\mathbf{1}_{[0,1]}(x)\]</span>
+und <span class="math inline">\(E[Y]=\frac{9}{14}\)</span>. Berechnen
+Sie <span class="math inline">\(E[X], E[X+Y], E[XY]\)</span> und <span
+class="math inline">\(\text{Cov}(X,Y)\)</span>. Sind <span
+class="math inline">\(X\)</span> und <span
+class="math inline">\(Y\)</span> unabhängig? Lösung: Der Erwartungswert
+von <span class="math inline">\(X\)</span> lässt sich wie folgt
+bestimmen: <span class="math display">\[
+\begin{aligned}
+E[X]&amp;= \int_0^1 x\cdot f^X(x) \mathrm{d}x \\
+&amp;= \int_0^1 x \cdot \left(\frac{6}{7}x+\frac{4}{7}\right)
+\mathrm{d}x  &amp;&amp; \text{ohne }\mathbf{1} \text{ da nur von Null
+bis Eins integriert wird}\\
+&amp;=\int_0^1\frac{6}{7}x^2+\frac{4}{7}x \mathrm{d}x \\
+&amp;=  \frac{6}{21}x^3+\frac{4}{14}x^2|_0^1 \\
+&amp;=\frac{12}{42}+\frac{12}{42} \\
+&amp;= \frac{24}{42} = \frac{4}{7}.
+\end{aligned}
+\]</span> Für den Erwartungswert <span
+class="math inline">\(E[X+Y]\)</span> gilt: <span
+class="math display">\[E[X+Y]
+=E][X]+E[Y]=\frac{9}{14}+\frac{4}{7}=\frac{17}{14}.\]</span> Der
+Erwartungswert <span class="math inline">\(E[XY]\)</span> lässt sich wie
+folgt bestimmen: <span class="math display">\[
+\begin{aligned}
+E[XY]&amp;= \int_0^1\int_0^1 x\cdot y\cdot f^{XY}(x,y)
+\mathrm{d}x\mathrm{d}y \\
+&amp;=  \int_0^1\int_0^1 x\cdot y\cdot\frac{6}{7}(x+2y^2)
+\mathrm{d}x\mathrm{d}y\\
+&amp;=  \int_0^1\int_0^1
+\frac{6}{7}x^2y+\frac{12}{7}y^3x  \mathrm{d}x\mathrm{d}y\\
+&amp;=  \int_0^1\int_0^1 \frac{6}{7}x^2y \mathrm{d}x\mathrm{d}y \: + \:
+\int_0^1\int_0^1 \frac{12}{7}y^3x  \mathrm{d}x\mathrm{d}y\\
+&amp;=\int_0^1\left(\frac{6}{7}\int_0^1x^2y
+\mathrm{d}x\right)\mathrm{d}y  \: + \:
+\int_0^1\left(\frac{12}{7}\int_0^1y^3x \mathrm{d}x\right)\mathrm{d}y  \\
+&amp;=\frac{6}{7}\int_0^1\left(\frac{1}{3}y\right)\mathrm{d}y  \: + \:
+\frac{12}{7}\int_0^1\left(\frac{1}{2}y^3\right)\mathrm{d}y \\
+&amp;= \frac{3}{21}+\frac{3}{14} = \frac{5}{14}.
+\end{aligned}
+\]</span> Die Kovarianz <span
+class="math inline">\(\text{Cov}(X,Y)\)</span> lässt sich nun schnell
+berechnen, mit <span class="math display">\[
+\begin{aligned}
+\text{Cov}(X,Y)]&amp;= E[XY]-E[X]E[Y] \\
+&amp;= \frac{5}{14} -\frac{8}{14}\cdot\frac{9}{14} \\
+&amp;= \frac{5}{14}-\frac{72}{196} = \frac{35}{98}-\frac{36}{98} \\
+&amp;= -\frac{1}{98}
+\end{aligned}
+\]</span> Die beiden Zufallsvariablen sind un/abhängig, weil.?????</li>
+<li>Sei <span class="math inline">\(X\sim\text{Poi}(\lambda)\)</span>
+für ein <span class="math inline">\(\lambda&gt;0\)</span>. Wir
+definieren<span class="math display">\[Y=\frac{1}{1+X} \quad \text{und}
+\quad Z = \frac{X}{1+X}.\]</span> Bestimmen Sie <span
+class="math inline">\(E[X]\)</span> und <span
+class="math inline">\(E[Y]\)</span>. Lösung: Für <span
+class="math inline">\(E[X]\)</span> gilt <span class="math display">\[
+\begin{aligned}
+E[X] &amp;= \sum_{k=1}^\infty k\cdot \frac{\lambda^k}{k!}e^{-\lambda} \\
+&amp;=\frac{1}{e^\lambda}\sum_{k=1}^\infty k\cdot \frac{\lambda^k}{k!}
+\\
+&amp;=\frac{1}{e^\lambda}\sum_{k=1}^\infty  \frac{\lambda^k}{(k-1)!} \\
+&amp;= \frac{1}{e^\lambda}\sum_{k=0}^\infty  \frac{\lambda^{k+1}}{(k)!}
+\\
+&amp;=  \frac{\lambda}{e^\lambda}\sum_{k=0}^\infty  \frac{\lambda^{k}}{(k)!}
+&amp;&amp;(e^x = \sum_{n = 0}^\infty \frac{x^n}{n!})\\
+&amp;= \frac{\lambda}{e^\lambda} e^\lambda = \lambda.
+\end{aligned}
+\]</span> Für <span class="math inline">\(E[Y]\)</span> gilt <span
+class="math display">\[\begin{aligned} E[Y] &amp;= \sum_{k=1}^\infty
+\frac{1}{1+k}^\cdot \frac{\lambda^k}{k!}e^{-\lambda} \\
+&amp;=e^{-\lambda} \sum_{k=1}^\infty \frac{\lambda^k}{(k+1)!},
+\end{aligned}
+\]</span>da die Poisson-Verteilung mit wachsendem <span
+class="math inline">\(k\)</span> schnell sehr klein wird, können wir die
+Summe näherungsweise auf endliche viele Summanden beschränken.</li>
+</ol>
+<p><strong>Aufgabe 8.2 - Stochastische und fast-sichere
+Konvergenz</strong> Wir betrachten den Wahrscheinlichkeitsraum <span
+class="math inline">\((\Omega,\mathcal{A},P)=([0,1],\mathcal{B}_{[0,1],U_{[0,1]}})\)</span>
+und definieren eine Folge von Zufallsvariablen <span
+class="math inline">\(X_n: \Omega \to \mathbb{R}, \:
+n\in\mathbb{N}\)</span>, durch <span
+class="math display">\[X_n(\omega)=\begin{cases} n, \text{falls } 0
+\leq\omega &lt;\frac{1}{n}\\ 0,\ \text{sonst.}\end{cases}\]</span>
+Ferner sei <span class="math inline">\(X=0\)</span> mit
+Wahrscheinlichkeit 1. Überprüfen Sie, ob</p>
+<ol type="1">
+<li><span class="math inline">\(\lim_{n \to \infty} E[X_n]=
+E[X]\)</span> Lösung: Für den Erwartungswert <span
+class="math inline">\(E[X_n]\)</span> gilt <span class="math display">\[
+\begin{aligned}
+E[X_n] &amp;= \int_0^1 x f(x) \mathrm{d}x \\
+&amp;= \int_0^\frac{1}{n} n\cdot 1 \mathrm{d}x \\
+&amp;= n \cdot \frac{1}{n} = 1.
+\end{aligned}
+\]</span> Somit ist <span class="math display">\[\lim_{n \to \infty}
+E[X_n]= 1.\]</span> Für <span class="math inline">\(E[X]\)</span> gilt
+<span class="math display">\[E[X]=0\cdot 1 = 0\neq 1 = \lim_{n \to
+\infty} E[X_n].\]</span></li>
+<li><span class="math inline">\(X_n \to X \text{ f.s}\)</span> Lösung:
+Es muss überprüft werden, ob <span class="math display">\[P\left(\lim_{n
+\to \infty} X_n(\omega)=X(\omega)=0\right)=1\]</span> gilt. Für jedes
+<span class="math inline">\(\omega \in (0,1]\)</span> kann ich ein
+Folgenglied <span class="math inline">\(n_0(\omega)\)</span> finden
+sodas für alls kommenden <span class="math inline">\(n\)</span> gilt
+<span class="math inline">\(\omega\geq \frac{1}{n}\)</span>. D.h. <span
+class="math inline">\(\forall n \geq n_0: X_n(\omega)=0\)</span>. Ist
+<span class="math inline">\(\omega = 0\)</span> dann gilt <span
+class="math inline">\(\forall n: X_n(\omega)=n\)</span>. Bei <span
+class="math inline">\(\omega=0\)</span> handelt es sich um eine
+Nullmenge. Also gilt, dass für fast alle <span
+class="math inline">\(\omega \in [0,1]\)</span> das <span
+class="math inline">\(X_n(\omega)\)</span> gegen Null konvergiert außer
+für <span class="math inline">\(\omega = 0\)</span> was eine Nullmenge
+ist. Somit gilt <span class="math display">\[X_n \to X \text{
+f.s}.\]</span></li>
+<li><span class="math inline">\(X_n \overset{P}{\to} X\)</span> Lösung:
+Es muss überprüft werden, ob <span class="math display">\[\lim_{n\to
+\infty}P(|X_n-X|\geq \epsilon)=0 \quad \forall \epsilon \geq 0.\]</span>
+Dies auf unsre Situation angewendet ergibt <span
+class="math display">\[P(|X_n-0|\geq \epsilon)=P(|X_n|).\]</span> Hier
+für gilt <span class="math display">\[\begin{aligned}
+P(|X_n\geq \epsilon|)&amp;= P(0\leq\omega&lt;\frac{1}{n})\\
+&amp;=\int_0^\frac{1}{n}1\mathrm{d}x = \frac{1}{n}\\
+\Rightarrow \quad \ \lim_{n\to \infty}P(|X_n-X|\geq \epsilon)
+&amp;=  \lim_{n\to \infty} \frac{1}{n} \\
+&amp;=0.
+\end{aligned}\]</span></li>
+</ol>
 <h2 id="cm">Concept-Map</h2>
 <p>Der Versuch, die Beziehungen zwischen den obigen Inhalten grafisch
 darzustellen. Klicke <a href="stmcm.html">hier für die Concept-Map</a>.
  </p>
 <p> </p>
 <hr />
-<p><span class="footer"><em>Aktualisiert: 04.01.2025 -
+<p><span class="footer"><em>Aktualisiert: 07.01.2025 -
 Jakob</em></span></p>
 </body>
 </html>
