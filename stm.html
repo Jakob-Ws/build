@@ -37,6 +37,8 @@ mir besuchten Vorlesung zu den Stochastischen Methoden. </p>
 <ol type="1">
 <li><a href="#01">Wahrscheinlichkeitsräume</a></li>
 <li><a href="#02">Zufallsvariablen und Verteilungen</a></li>
+<li><a href="#03">Bedingte Wahrscheinlichkeiten und stochastische
+Unabhängigkeit</a> (#03)</li>
 <li><a href="#a0">Aufgabenblatt 00</a></li>
 <li><a href="#a1">Aufgabenblatt 01</a></li>
 <li><a href="#a8">Aufgabenblatt 08</a></li>
@@ -436,6 +438,108 @@ class="math inline">\(F&#39;=f\)</span>, so hat das
 Wahrscheinlichkeitsmaß <span class="math inline">\(P\)</span> mit dichte
 <span class="math inline">\(f\)</span> die Verteilungsfunktion <span
 class="math inline">\(F\)</span>.</p>
+<h2 id="03">Bedingte Wahrscheinlichkeiten und stochastische
+Unabhängigkeit</h2>
+<p><strong>Definition - Bedingte Wahrscheinlichkeit</strong> Sei <span
+class="math inline">\((\Omega,\mathcal{A},P)\)</span> ein
+Wahrscheinlichkeitsraum und <span class="math inline">\(B\in
+\mathcal{A}\)</span> mit <span class="math inline">\(P(B)&gt;0\)</span>.
+Man nennt <span class="math display">\[P(A|B)=\frac{P(A \cap
+B)}{P(B)}\]</span> die <em>bedingte Wahrscheinlichkeit von A gegeben
+B</em>. Allgemeiner heißt <span class="math inline">\(P(\cdot|B):
+\mathcal{A}\to[0,1]\)</span> die <em>bedingte Verteilung gegeben <span
+class="math inline">\(B\)</span></em>.</p>
+<p><strong>Satz - Satz der totalen Wahrscheinlichkeit &amp; der Satz von
+Bayes</strong> Sei <span
+class="math inline">\((\Omega,\mathcal{A},P)\)</span> ein
+Wahrscheinlichkeitsraum. Für eine Zerlegung <span
+class="math inline">\((B_n)_{n\in \mathbb{N}}\)</span> von <span
+class="math inline">\(\Omega\)</span> (d.h. p.w Disjunkte <span
+class="math inline">\(B_n\)</span> mit <span
+class="math inline">\(\bigcup B_n = \Omega\)</span>) gilt:</p>
+<ol type="1">
+<li>Für <span class="math inline">\(A\in \mathcal{A}\)</span> <span
+class="math display">\[P(A)=\sum_{n\in
+\mathbb{N}}P(A|B_n)P(B_n)\]</span></li>
+<li>Für <span class="math inline">\(A\in \mathcal{A}\)</span> mit <span
+class="math inline">\(P(A)&gt;0\)</span> <span
+class="math display">\[P(B_k|A)=\frac{P(A|B_k)P(B_k)}{\sum_{n\in
+\mathbb{N}}P(A|B_n)P(B_n)}\]</span></li>
+</ol>
+<p><em>Beweis:</em></p>
+<ol type="1">
+<li><span
+class="math inline">\(P(A)=P(A\cap\Omega)=P(A\cap\bigcup_{n\in\mathbb{N}}B_n)=P(\bigcup_{n\in\mathbb{N}}A\cap
+B_n)=\sum_{n\in \mathbb{N}}P(A\cap B_n)=\sum_{n\in
+\mathbb{N}}P(A|B_n)P(B_n)\)</span></li>
+<li><span class="math inline">\(P(B_k|A)=\frac{P(B_k\cap
+A)}{P(A)}=\frac{P(A|B_k)P(B_k)}{P(A)}=\frac{P(A|B_k)P(B_k)}{\sum_{n\in
+\mathbb{N}}P(A|B_n)P(B_n)}\)</span></li>
+</ol>
+<h3 id="stochastische-unabhängigkeit">Stochastische Unabhängigkeit</h3>
+<p><strong>Definition - Stochastische Unabhängigkeit</strong> Sei <span
+class="math inline">\((\Omega,\mathcal{A},P)\)</span> ein
+Wahrscheinlichkeitsraum. Ereignisse <span class="math inline">\(A,B\in
+\mathcal{A}\)</span> heißen <em>stochastisch unabhängig</em>, wenn <span
+class="math display">\[P(A\cap B)=P(A)P(B).\]</span> Ferner nennt man
+eine Familie von Ereignissen <span class="math inline">\((A_i)_{i\in
+I}\)</span> stochastisch unabhängig, wenn für jede Teilmenge <span
+class="math inline">\(J\subseteq I\)</span> gilt <span
+class="math display">\[P(\bigcap_{i\in J}A_i)=\prod_{i \in
+J}P(A_i).\]</span></p>
+<p><strong>Definition - unabhängige Zufallsvariablen</strong> Eine
+Familie von Zufallsvariablen <span class="math inline">\((X_i)_{i\in
+I}\)</span> auf <span class="math inline">\((\Omega,\mathcal{A},P),
+X_i\)</span> mit werten in <span
+class="math inline">\((\Omega_i,\mathcal{A_i})\)</span> heißt
+<em>unabhängig</em>, wenn für jede Wahl <span
+class="math inline">\(A_i\in \mathcal{A_i}\)</span> die Ereignisse <span
+class="math inline">\((\{X_i \in A_i\})_{i\in I}\)</span> unabhängig
+sind. Besitzen die Zufallsvariablen noch die gleiche Verteilung, so
+nennt man sie <em>unabhängig identisch</em>.</p>
+<h3 id="gemeinsame-verteilung">Gemeinsame Verteilung</h3>
+<p><strong>Definition - Gemeinsame Verteilung</strong> Sei <span
+class="math inline">\((\Omega,\mathcal{A},P)\)</span> ein
+Wahrscheinlichkeitsraum und seien <span class="math inline">\(X_i:
+\Omega \to \mathbb{R}, i \cdots,d\)</span> mit <span
+class="math inline">\(d\in \mathbb{N}\)</span>, Zufallsvariablen. Man
+nennt die Verteilung <span
+class="math inline">\(P^X=P^{(X_1,\cdots,X_d)}\)</span> der
+Zufallsvariablen <span class="math display">\[X:\Omega \to \mathbb{R}^d
+\quad X(\omega)=(X_1(\omega),\cdots, X_d(\omega) )^T\]</span> die
+<em>gemeinsame Verteilung</em> von <span class="math inline">\(X_1,
+\cdots, X_d.\)</span>Die <span class="math inline">\(P_i^X\)</span> sind
+<em>Randverteilungen</em> von <span
+class="math inline">\(X\)</span>.</p>
+<h3 id="die-verteilung-von-summen-unabhängiger-zufallsvariablen">Die
+Verteilung von Summen unabhängiger Zufallsvariablen</h3>
+<p><strong>Satz - Summe von Zufallsvariablen</strong></p>
+<p>Seien <span class="math inline">\(X,Y: \Omega\to \mathbb{R}\)</span>
+unabhängige Zufallsvariablen.</p>
+<ol type="1">
+<li>Sind <span class="math inline">\(X,Y\)</span> diskret, mit Werten in
+<span class="math inline">\(\mathbb{Z}\)</span>, so ist die Verteilung
+von <span class="math inline">\(X+Y\)</span> gegeben durch <span
+class="math display">\[P^{X+Y}=P^X
+*P^Y=\sum_{i\in\mathbb{Z}}P^X(i)P^Y(m-i) \quad m\in
+\mathbb{Z}.\]</span></li>
+<li>Haben die Verteilungen von <span class="math inline">\(X,Y\)</span>
+stückweise stetige Dichten <span class="math inline">\(f^X,f^Y\)</span>,
+so gilt <span class="math inline">\(P^{X+Y}=P^X*P^Y\)</span>, auf <span
+class="math inline">\(\mathbb{R}\)</span> gegeben ist durch die Dichte
+<span class="math display">\[f^X*f^Y:\mathbb{R}\to[0,\infty) \quad t\to
+\int_\mathbb{R} f^Xf^Y(t-x) \mathrm{d}x.\]</span></li>
+</ol>
+<p><strong>Definition - Faltung</strong> In der Situation vom Satz -
+Summen von Zufallsvariablen heißt <span
+class="math inline">\(P^X*P^Y\)</span> die <em>Faltung</em> von <span
+class="math inline">\(P^X\)</span> und <span
+class="math inline">\(P^Y\)</span> sowie die Faltung der Dichten <span
+class="math inline">\(f^X\)</span>und <span
+class="math inline">\(f^Y\)</span>. Für <span
+class="math inline">\(n\geq2\)</span> gilt: <span
+class="math display">\[P^X_{*1}=P^X \text{ und }
+P^X_{*n}=P^X_{*n-1}*P^X.\]</span></p>
 <h2 id="a0">Aufgabenblatt 00</h2>
 <p><strong>Aufgabe 0.1 - Ergebnismengen und Ereignisse</strong> Geben
 Sie zur Modellierung der folgenden Zufallsexperimente jeweils eine
@@ -856,7 +960,7 @@ darzustellen. Klicke <a href="stmcm.html">hier für die Concept-Map</a>.
  </p>
 <p> </p>
 <hr />
-<p><span class="footer"><em>Aktualisiert: 07.01.2025 -
+<p><span class="footer"><em>Aktualisiert: 09.01.2025 -
 Jakob</em></span></p>
 </body>
 </html>
